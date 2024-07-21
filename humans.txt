@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Brian Walsh -- Writer, Designer & Developer -- Twitter: @velshnia
+
+# THANKS
+
+  Elon University, The Order Of the Good Death
+
+# TECHNOLOGY COLOPHON
+
+  Greensock, HTML5, CSS3, JavaScript

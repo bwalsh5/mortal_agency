@@ -1,0 +1,389 @@
+
+:root {
+    --unit-100vh: 100vh;
+  }
+  @supports (height: 100dvh) {
+    :root {
+        --unit-100vh: 100dvh;
+    }
+  }
+  #acc {
+    position: fixed;
+    bottom: 4px;
+    left:6px;
+    font-size: 1.5em;
+    z-index:9999;
+    /* width: 120px;
+    height: 120px; */
+    overflow: hidden;
+    }
+    #acc svg {
+      width: 38px;
+
+    height 38px;
+    
+      transform:scale(1.5);
+    }
+    
+    .btn {
+      width: 38px;
+      height: 38px;
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 38px;
+      -webkit-appearance: none;
+      color: black;
+    }
+
+    /* END VIZ */
+
+  .fp-watermark {
+    display: none;
+  }
+ a:link, a:hover, a:active, a:visited {
+    /* color: rgb(155,155,155); */
+    text-decoration: none;
+ }
+  html {
+    margin: 0;
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    background: url('../cork-wallet.png' );
+    /*    position: fixed;*/
+  }
+  img, svg {
+    max-width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  }
+  #fullpage {
+  
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+/* NAV */
+nav {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+    /* visibility: hidden; */
+}
+nav a {
+  text-decoration: none;
+}
+nav ul {
+  /* max-width: 92vw; */
+  background:rgba(210, 180, 140, 0.4);
+  list-style: none;
+  margin: 0;
+/*  padding-left: 60px;*/
+
+  display: flex;
+        justify-content: space-around;
+/*  max-height: 40px;*/
+}
+nav li {
+  color: #000;
+  /*  background:rgba(210, 180, 140, 0.3);*/
+  /* 	display: block; */
+  padding: .5rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+/*  margin-left: 80px;*/
+}
+nav li a {
+  color: #000;
+}
+nav li:hover,
+nav li:focus-within {
+  background: rgba(0, 100, 0, 0.3);
+  cursor: pointer;
+}
+nav li:focus-within a {
+  outline: none;
+}
+nav li .comingSoon {
+  color: rgba(255,255,255,0.3);
+  /* text-decoration: line-through;   */
+}
+
+#menuToggle
+{
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: rgb(174, 140, 5);
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 100vw;
+  margin: -100px 0 0 -50px;
+  padding: 0 120px;
+  padding-top: 120px;
+  height: 100vh;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#indent {
+  text-indent: 24px;
+}
+#menu li
+{
+  padding: 10px 0;
+  font-size: 20px;
+  text-align: left;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+@media (max-width: 1024px) {
+
+  nav  {
+    display: none;
+  }
+ #menuToggle {
+  display: block;
+}
+}
+
+.strikethru {
+  text-decoration: line-through;
+}
+
+
+
+  /* END NAV */
+
+
+
+  #me {
+    /* max-width: 320px; */
+   text-align: right;
+  }
+
+
+  section ul {
+ 
+    list-style-position: inside;
+    text-align: left;
+  }
+  section, .slide {
+  height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+      overflow-y:hidden;
+      
+      position: relative;
+
+    margin: 0 auto;
+  }
+  .fp-overflow h2 {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+.bold {
+  font-weight: 900;
+  padding: 0 4px;
+  font-style: italic;
+}
+
+h2 {
+  color: white;
+	margin: 0;
+  padding-left:0;
+  overflow-X: visible;
+	z-index:9999;
+  box-sizing: border-box;
+	 font-size: 8rem;
+  /*    line-height: 10px;*/
+  font-weight: 900;
+  -webkit-text-stroke: 1px #666;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-text-fill-color: rgba(0,0,0,0.1);
+}
+
+p {
+  max-width: 70%;
+ margin: 8px auto;
+ 
+
+}
+.title {
+
+  font-family: 'Inter', sans-serif; 
+  padding: 12px;
+  background: rgba(96, 15, 15, 0.11);
+
+  box-shadow: 0 0 3px 5px rgba(96, 15, 15, 0.11);
+/* background: rgba(15,15,96, 0.2); */
+/* box-shadow: 0 0 5px 10px rgba(15, 15, 96, 0.2);  */
+  max-width: 60vw;
+/*        text-align: left;*/
+  margin: 0 auto;
+text-align: center;
+display: flex;
+justify-content: center;
+position: relative;
+z-index: 9998;
+font-size: 1.2em;
+}
+@media all and (max-width: 800px) {
+  h2 {
+    position: static;
+    font-size: 4em;
+    margin-bottom: 0;
+    margin-top: 60px;
+  }
+  p {
+    padding: 0 22px;
+    font-size: 0.9em;
+  }
+  .title {
+    font-size: 1em;
+    padding: 12px;
+  }
+  /* nav ul li {
+    border-right: 1px dotted #ccc;
+    padding-left: 1px;
+  } */
+}
+
+
+  .fp-controlArrow.fp-next { border-color: transparent transparent transparent rgba(0,0,0,.1);
+margin-top: 60px;
+ }
+.fp-controlArrow.fp-prev { border-color: transparent rgba(0,0,0,.1) transparent transparent; margin-top: 60px; }
+
+  @media all and (max-width: 800px) {
+    section {
+      /* height: calc(80vh - env(safe-area-inset-bottom)); */
+ padding: 0 24px;
+    }
+
+  }
+  @media all and (max-width: 550px) {
+    section {
+      /* height: calc(60vh - env(safe-area-inset-bottom)); */
+  
+    }
+  
+  }
+ 
+@media print {
+
+  *{ 
+    background: white;
+    color: black;
+    display: static;
+    background-image: none;
+    background-color: white;
+
+  }
+  body {
+    background: transparent;
+  }
+}

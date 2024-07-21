@@ -1,0 +1,168 @@
+
+
+:root {
+    --unit-100vh: 100vh;
+  }
+  @supports (height: 100dvh) {
+    :root {
+        --unit-100vh: 100dvh;
+    }
+  }
+  
+  .fp-watermark {
+    display: none;
+  }
+ a:link, a:hover, a:active, a:visited {
+    color: rgb(155,155,155);
+    text-decoration: none;
+ }
+  html {
+    margin: 0;
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    background: url('../cork-wallet.png' );
+    /*    position: fixed;*/
+  }
+  img, svg {
+    /* max-width: 20%; */
+  text-align: center;
+  margin: 0 auto;
+  }
+  #fullpage {
+  
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  nav, footer {
+    position:fixed;
+    height: 60px;
+    width: 100%;
+    background: #333;
+    z-index:9999;
+    text-align:center;
+    color: rgb(115,115,115);
+  }
+  footer {
+    bottom:0
+  }
+  nav ul, footer ul {
+    list-style: none;
+    display: flex;
+    
+    justify-content: space-evenly;
+    padding-left:0;
+    text-align: center;
+
+  }
+
+  nav ul li:last-child{
+    border-right: none;
+  }
+  section, .slide {
+  height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+      overflow-y:hidden;
+      
+      position: relative;
+  }
+.title {
+
+  font-family: 'Inter', sans-serif; 
+  padding: 12px;
+  background: rgba(96, 15, 15, 0.11);
+
+  box-shadow: 0 0 3px 5px rgba(96, 15, 15, 0.11);
+/* background: rgba(15,15,96, 0.2); */
+/* box-shadow: 0 0 5px 10px rgba(15, 15, 96, 0.2);  */
+  max-width: 60vw;
+/*        text-align: left;*/
+  margin: 0 auto;
+text-align: center;
+display: flex;
+justify-content: center;
+position: relative;
+z-index: 9998;
+}
+
+.bold {
+  font-weight: 900;
+  padding: 0 4px;
+  font-style: italic;
+}
+
+h2 {
+  color: white;
+	position: absolute;
+  top:0;
+  left: 0;
+  overflow: hidden;
+	z-index:9997;
+  box-sizing: border-box;
+	 font-size: 8rem;
+  /*    line-height: 10px;*/
+  font-weight: 900;
+  -webkit-text-stroke: 1px #666;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-text-fill-color: rgba(0,0,0,0.1);
+}
+
+
+p {
+  max-width: 1024px;
+}
+@media all and (max-width: 800px) {
+  h2 {
+    position: static;
+    font-size: 4em;
+    margin-bottom: 0;
+  }
+  p {
+    padding: 0 22px;
+  }
+  nav ul li {
+    border-right: 1px dotted #ccc;
+    padding-left: 1px;
+  }
+}
+
+
+  .fp-controlArrow.fp-next { border-color: transparent transparent transparent rgba(0,0,0,.1);
+margin-top: 60px;
+ }
+.fp-controlArrow.fp-prev { border-color: transparent rgba(0,0,0,.1) transparent transparent; margin-top: 60px; }
+
+  @media all and (max-width: 800px) {
+    section {
+      height: calc(80vh - env(safe-area-inset-bottom));
+ 
+    }
+
+  }
+  @media all and (max-width: 550px) {
+    section {
+      height: calc(60vh - env(safe-area-inset-bottom));
+  
+    }
+  
+  }
+
+/* *{ 
+    background: white;
+    color: black;
+    position: static;
+    background-image: none;
+    background-color: white;
+
+  }
+  body {
+    background: transparent;
+  }
+ svg {
+    display: none;
+  } */

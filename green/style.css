@@ -1,0 +1,807 @@
+:root {
+  --unit-100vh: 100vh;
+}
+@supports (height: 100dvh) {
+  :root {
+      --unit-100vh: 100dvh;
+  }
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  /* background: linear-gradient(rgba(51,85,29,0),rgba(79,68,32,0.4)); */
+
+}
+body {
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  font-family: sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    background: url('../cork-wallet.png');
+     overflow-x:hidden;
+     overflow-x:hidden;
+    overflow-y:visible;
+
+}
+/* MODAL */
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    font-size: 1.2em;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* END MODAL */
+  #acc {
+    position: fixed;
+    bottom: 4px;
+    left:6px;
+    font-size: 1.5em;
+    z-index:9999;
+    /* width: 120px;
+    height: 120px; */
+    overflow: hidden;
+    }
+    #acc svg {
+     width:38px;
+     height: 38px;
+      transform:scale(1.5);
+    }
+    
+    .btn {
+      width: 38px;
+      height: 38px;
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 38px;
+      -webkit-appearance: none;
+      color: black;
+    }
+.btn img {
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  margin: 0 auto;
+}
+#svg {
+	width: 100%;
+	display: block;
+visibility: hidden;
+padding-top: 40px;
+}
+#first, #second, #third {
+	color: white;
+	position: absolute;
+	z-index:9997;
+  box-sizing: border-box;
+	 font-size: 8rem;
+  /*    line-height: 10px;*/
+  font-weight: 900;
+  -webkit-text-stroke: 1px #666;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-text-fill-color: rgba(0,0,0,0.1);
+/*   letter-spacing: -0.185em; */
+
+}
+#first {
+	left: .5em;
+  top: 0.5em;
+
+}
+#second {
+	left: 1.5em;
+	top:1.4em;
+}
+
+@media all and (max-width: 800px) {
+	#first {
+    top: 2em;
+  }
+  #second {
+    top: 4em;
+  }
+	#first, #second {
+		font-size: 3em;
+		padding-left: 0;
+
+	}
+  #svg {
+    padding-bottom: 50vh;
+  }
+	
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100%;
+position:absolute;
+/*    overflow-x:hidden;*/
+    overflow-y: visible;
+    top: 0;
+    z-index: 8000;
+}
+
+
+nav {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+    visibility: hidden;
+}
+nav a {
+  text-decoration: none;
+}
+nav ul {
+  /* max-width: 92vw; */
+  background:rgba(210, 180, 140, 0.4);
+  list-style: none;
+  margin: 0;
+/*  padding-left: 60px;*/
+
+  display: flex;
+        justify-content: space-around;
+/*  max-height: 40px;*/
+}
+nav li {
+  color: #000;
+  /*  background:rgba(210, 180, 140, 0.3);*/
+  /* 	display: block; */
+  padding: .5rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+/*  margin-left: 80px;*/
+}
+nav li a {
+  color: #000;
+}
+nav li:hover,
+nav li:focus-within {
+  background: rgba(0, 100, 0, 0.3);
+  cursor: pointer;
+}
+nav li:focus-within a {
+  outline: none;
+}
+nav li .comingSoon {
+  color: rgba(255,255,255,0.3);
+  /* text-decoration: line-through;   */
+}
+
+#menuToggle
+{
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: rgb(174, 140, 5);
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 100vw;
+  margin: -100px 0 0 -50px;
+  padding: 0 120px;
+  padding-top: 120px;
+  height: 100vh;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#indent {
+  text-indent: 24px;
+}
+#menu li
+{
+  padding: 10px 0;
+  font-size: 20px;
+  text-align: left;
+}
+@media all and (max-width: 800px) {
+
+  #menu {
+    padding-top: 20px;
+    top: 86px;
+    height: 500px;
+  }
+  #menu li {
+    padding: 4px 0
+  }
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+@media (max-width: 1024px) {
+
+  nav  {
+    display: none;
+  }
+ #menuToggle {
+  display: block;
+}
+}
+
+.strikethru {
+  text-decoration: line-through;
+}
+.spacer{
+	width: 100%;
+	height: 320px;
+/*	border:1px solid purple;*/
+}
+.minispacer {
+  height: 160px;
+}
+#title {
+        padding: 12px 14px ;
+        background: rgba(96, 15, 15, 0.11);
+        font-family:'Inter', sans-serif; 
+        box-shadow: 0 0 3px 5px rgba(96, 15, 15, 0.11);
+    /* background: rgba(15,15,96, 0.2); */
+     /* box-shadow: 0 0 5px 10px rgba(15, 15, 96, 0.2);  */
+        max-width: 60vw;
+/*        text-align: left;*/
+        margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index:9997;
+}
+.icon {
+    justify-self: flex-start;
+}
+.arrow {
+transform:rotate(180deg);
+}
+#arrowBox {
+visibility: hidden;
+	font-family: sans-serif;
+	max-width: 52px;
+	padding: 4px 2px 6px 2px;
+	border: 2px solid rgba(200,200,200,.4);
+    background: rgba(50,50,50,.4);
+    color: #ccc;
+	border-radius: 4px;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+    margin: 0 auto;
+    position: relative;
+    top: -45vh;
+    
+}
+#arrowBox p {
+	padding-bottom: 16px;
+    line-height: 0.8;
+    font-size: 0.8em;
+}
+.arrow {
+	display: inline-block;
+	font-size: 1.2em;
+	margin-top: -16px;
+}
+@media all and (max-width: 800px ) {
+    .arrow {
+        font-size: 1.5em;
+    margin-top: -12px;
+    }
+}
+#title, #text {
+	pointer-events: none;
+}
+#text {
+     font-family: 'Inter', sans-serif; 
+    text-align: left;
+  background: rgba(96, 15, 15, 0.11);
+  padding: 1.2em;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 5px rgba(96, 15, 15, 0.11);
+/*  transition: all 1s ease;*/
+  min-height: 220px;
+    font-size: 0.9em;
+    max-width: 60vw;
+    margin: 0 auto;
+    position: relative;
+    z-index:9998;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+#fade {
+    text-align: center;
+    position: relative;
+    z-index: 8000;
+    max-width: 30vw;
+    margin: 0 auto;
+}
+#coffin {
+text-align: center;
+position: relative;
+max-width: 35vw;
+margin: 0 auto;
+
+}
+#coffinFront {
+  position: absolute;
+    width: 100%;
+    z-index: 8001;
+
+}
+#coffinBack {
+      position: absolute;
+z-index: 7999;
+    width: 100%;
+}
+
+#vault {
+text-align: center;
+ position: relative;
+    opacity: 0.8;
+    max-width: 40vw;
+    margin: 0 auto;
+
+}
+#vaultFront {
+  position: absolute;
+    width: 100%;
+    z-index: 9901;
+
+}
+#vaultBack {
+      position: absolute;
+  z-index: 1;
+    width: 100%;
+    /* top: -18px; */
+}
+
+@media all and (max-width: 800px) {
+
+  #title, #text {
+    width: 100vw;
+    padding: 0 12px;
+    background: rgba(255,255,255,.7);
+
+  }
+  #summarytext, #summarytitle {
+    padding: 0 12px;
+  }
+  #fade, #coffin, #vault {
+max-width: 65vw;
+  }
+}
+
+
+
+#grass {
+  position: relative;
+  width: 100%;
+  /* background:url('grassTopHairs.png'); */
+  /* background-repeat: repeat-x; */
+  opacity: 0.7;
+  height:142px;
+}
+
+#green {
+width: 100%;
+  background: linear-gradient(to bottom, rgba(138,182, 60, 0.7) 80%, rgba(88,142, 10, 0.0));
+ position: relative;
+  height: 600vh;
+  top: -5px;
+  /* background: linear-gradient(to bottom, rgba(138,152, 80, .8) 4%, rgba(63,57, 47, .6)); */
+
+}
+@media all and (max-width: 800px) {
+  #grass {
+      height: 60px;
+}
+  
+  #green {
+      top: -5px;
+      /* height: 160px; */
+  }
+}
+
+@media all and (max-width: 800px) {
+  #flower_holder svg {
+  max-width: 50px;     
+     
+}
+  #flower_holder {
+    top:-30px;  
+  }
+  /* #green {
+    top: 45px;
+  
+  } */
+}
+
+.lister {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#sixthLister {
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+@media all and (max-width: 800px) {
+  #sixthLister {
+    height: calc(100vh - env(safe-area-inset-bottom));
+    /* height: 100%; */
+    /* border: 1px solid red; */
+  }
+  }
+
+
+  .summarytitle {
+    font-family: 'Inter', sans-serif; 
+  
+          padding: 12px;
+          background: rgba(96, 15, 15, 0.11);
+  
+          box-shadow: 0 0 3px 5px rgba(96, 15, 15, 0.11);
+      /* background: rgba(15,15,96, 0.2); */
+       /* box-shadow: 0 0 5px 10px rgba(15, 15, 96, 0.2);  */
+          max-width: 60vw;
+  /*        text-align: left;*/
+          margin: 0 auto;
+      text-align: center;
+      /* display: flex; */
+      /* justify-content: center; */
+      position: relative;
+      z-index: 9998;
+  }
+  #summarytext{
+    font-family: 'Inter', sans-serif; 
+   text-align: left;
+   
+  /* background: rgba(96, 15, 15, 0.11); */
+  padding: 1.2em;
+  /* border-radius: 4px; */
+  /* box-shadow: 0 0 3px 5px rgba(96, 15, 15, 0.11); */
+  /*  transition: all 1s ease;*/
+  min-height: 120px;
+   font-size: 0.9em;
+   max-width: 60vw;
+   margin: 0 auto;
+   position: relative;
+   z-index:9997;
+   /* display:flex; */
+   /* flex-direction: column; */
+   /* justify-content: center; */
+  /* align-items: center; */
+   width: fit-content;
+   height: fit-content;
+   margin: 0 auto;
+  }
+
+#summary_grid {
+	
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto;
+  width: 85%;
+
+}
+/* #heading {
+	grid-column: 1/3;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+    font-size: 1.2em;
+} */
+#summary_grid section {
+  flex: 0 0 20%;
+		font-size: 1.5em;
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 6px;
+	border-radius:12px;
+	margin: 4px;
+  position: relative;
+  z-index: 9999;
+  /* margin: 0 auto; */
+}
+#summary_grid section svg{
+  width: 25%;
+  max-width: 25%;
+  }
+  @media all and (max-width: 800px) {
+
+    #summary_grid section {
+    padding: 2px 5px;
+    flex-direction: column;
+    }
+    #summary_grid section {
+    min-width: 32px
+    }
+    #summary_grid section svg{
+      width: 85%;
+    max-width: 85%;
+    
+    }
+    }
+#consider {
+ font-weight: normal;
+ padding-top: 180px;
+}
+.dot {
+  display: inline-block;
+  padding-left:2px;
+  font-size: 0.5em;
+}
+@media all and (max-width: 800px) {
+.dot {
+  /* font-size: 1em; */
+  padding-left: 0;
+}
+}
+
+
+#money_icon, #money_icon2, #tree1, #family path, #family circle, #god, #p1, #p2, #p3, #globe path {
+	fill: none;
+	stroke: black;
+	stroke-width:2;
+}
+.lister svg {
+  max-width: 10vw;
+/*    margin-bottom: 320px;*/
+}
+
+@media all and (max-width: 800px) {
+ .lister svg {
+  max-width: 30vw;
+/*    margin-bottom: 320px;*/
+} 
+}
+
+
+
+
+.faq {
+  margin: 0 auto;
+  padding: 4rem;
+  max-width: 60vw;
+font-family: inherit;
+}
+@media all and (max-width: 650px) {
+  .faq {
+    max-width:90vw;
+    padding: 0.3rem;
+  }
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #666;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #666;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+@media all and (max-width:650px) {
+  .accordion button {
+    font-size: .8em;
+  }
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #666;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #666;
+  border: 1px solid #666;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded=true] {
+  color: #333;
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1em 0;
+}
+
+@media all and (max-width: 650px) {
+  .accordion .accordion-content p {
+   font-size: .8em;
+    
+  }
+  
+}

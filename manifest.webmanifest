@@ -1,0 +1,14 @@
+{
+  "name": "Mortal Agency",
+  "short_name": "Mortal Agency",
+  "description": "Learn about the options for your body after death",
+  "theme_color": "rgba(210, 180, 140, 0.3)",
+  "background_color": "rgba(210, 180, 140, 0.3)",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "index.html",
+  "icons": [
+    { "src": "apple-touch-icon.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
