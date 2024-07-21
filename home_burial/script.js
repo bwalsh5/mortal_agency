@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-
   // const landscape = window.matchMedia("(orientation: landscape) and (max-width: 800px)").matches;
 
   // if (landscape == true) {
   //   alert('please rotate your device.');
   // }
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(DrawSVGPlugin)
+  gsap.registerPlugin(MorphSVGPlugin);
+  MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
   //MODAL
-
-// Get the modal
-
 var modal = document.getElementById("myModal");
 // localStorage.setItem("modalshown", "1")
-
 if(localStorage.getItem("modalshown") == "0") {
 modal.style.display = "block";
 localStorage.setItem("modalshown", "1")
@@ -20,18 +20,14 @@ localStorage.setItem("modalshown", "1")
   modal.style.display = "none";
   // localStorage.setItem("modalshown", "0")
   // console.log('do not show modal')
-
 }
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -44,30 +40,22 @@ window.onscroll = function(){
     document.getElementById('myModal').style.display = "none";
     localStorage.setItem("modalshown", "0")
   } else {
-    //document.getElementById('nav').style.background = "yellow";
   }
   };
-
-
 //END MODAL
+
 //START VISIBILITY
-
-
 var resizeFont = function(d) {
   var el = $('html');
   $(el).css('font-size', parseInt($(el).css('font-size')) + d);  
   // $(el).css('line-height', parseInt($(el).css('line-height')) + d);  
-
 }
-
 $('#plus').click(function() {
 resizeFont(1);
 });
-
 $('#minus').click(function() {
 resizeFont(-1);
 }); 
-
 $('#color').click(function() {
 $('body').css('background', 'white')
 $('nav').css('background', 'white')
@@ -86,35 +74,23 @@ $('#text').css('color', 'black')
 $('header').css('color', 'black')
 $('footer').css('color', 'black')
 }); 
-
-
-   gsap.registerPlugin(ScrollTrigger);
    // END VIZ
-
   window.onbeforeunload = function() {
     history.scrollRestoration = "manual";
     // scroll to top on refresh  
     window.scrollTo(0,0);   
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   document.body.scrollTop = 0; // For Safari
-  
+ 
   }
-  gsap.registerPlugin(DrawSVGPlugin) 
-  gsap.registerPlugin(MorphSVGPlugin)
-  MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
-
-
 gsap.to("#first", {duration: 5, text: "traditional", autoAlpha: 1, delay: 1});
 gsap.to("#second", {duration: 6, text: "burial", delay: 2});
-
 
 const myTimeout = setTimeout(fade, 1);
 
 function fade() {
   document.getElementById('svg').style.visibility = "visible";
 }
-
-
 gsap.set('#svg path', {
 	autoAlpha:0,
 	scaleX:0,
@@ -130,13 +106,8 @@ fader.to('#svg path', {
 		autoAlpha:1,
 	scaleX:"100%",
 	scaleY:"100%",
-
 	stagger: .01
-	
 })
-
-
-
 
     let titles  = [
      `<p class='title'>Home funerals are performed by chosen family or friends.`,
@@ -184,7 +155,6 @@ let texty = [
   `<p>and create an opportunity for more meaningful involvement. This may include decorating a coffin or shroud, arranging flowers, memorial making, and holding a funeral service that is family and community led instead of funeral industry led. 
   </p>`,
        
-  
   //3
             `<p>While legal, if there isn't a cemetery legally established on your property, you will need to contact your local zoning board regarding regulations, permits, and more. 
             </p>`,
@@ -207,7 +177,6 @@ let texty = [
               <p>Ranking:<span class="dot">&#9733; &#9733; &#9733; &#9733; &#9733;
               </span></p>`, 
         
-  
       //fam
             `<p class='endnote'> 
   
@@ -224,9 +193,7 @@ let texty = [
        `<p>In addition to the previously mentioned restrictions, ten states require the services of a licensed Funeral Director for home burial.</p> 
   
          <p>Ranking:<span class="dot">&#9733; &#9733; &#9733; &#9734; &#9734;</span></p>`
-        
-
-
+      
 ]
     
 document.getElementById('title').innerHTML = titles[0];
@@ -283,21 +250,14 @@ function zero() {
 
     }
     
-
   function nine() {
-    // document.getElementById('title').innerHTML = titles[9];  
-    // document.getElementById('text').innerHTML = texty[9]; 
-      // document.getElementById('nav').style.display =  "none";
+    
       document.getElementById('text').style.display =  "none";
       document.getElementById('coffin').style.display =  "none";
-
       document.getElementById('title').style.display =  "none";
 
     }
 
-//gsap.to('#bod', {fill: "#7fc241", delay: 2});
-
-//gsap.to('.green', 3, {fill: "#7fc241",  delay: 1});
 
  gsap.set('.arrow', {rotation: 180})
  gsap.set('#arrowBox', {opacity: 0})
@@ -487,15 +447,6 @@ let end_of_days = new gsap.timeline();
 end_of_days.to('#globe path', {
   autoAlpha: 0
 })
-
-    
-    // let fit = new gsap.timeline();
-    
-    // fit.to('#text', {
-    //   width: "fit-content",
-    //     height: "fit-content"
-    // })
-    
 
 
 	ScrollTrigger.create({
