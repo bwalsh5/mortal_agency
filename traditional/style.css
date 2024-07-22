@@ -14,14 +14,7 @@
   font-weight: 400;
   src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* montserrat-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+
 
   /* MODAL */
   /* The Modal (background) */
@@ -136,7 +129,7 @@ position:absolute;
   padding: 0 48px;
   font-weight: 900;
   -webkit-text-stroke: 1px #666;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   -webkit-text-fill-color: rgba(0,0,0,0.1);
   letter-spacing: -0.045em;
   letter-spacing: -160px;
@@ -200,7 +193,7 @@ position:absolute;
 
 
 nav {
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   font-weight: 200;
   width: 100%;
   position: fixed;
@@ -401,7 +394,7 @@ box-sizing: border-box;
 /*    line-height: 10px;*/
 font-weight: 900;
 -webkit-text-stroke: 1px #666;
-font-family: 'Montserrat', sans-serif;
+/* font-family: 'Montserrat', sans-serif; */
 -webkit-text-fill-color: rgba(0,0,0,0.1);
 /*   letter-spacing: -0.185em; */
 

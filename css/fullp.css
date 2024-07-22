@@ -16,14 +16,6 @@
   font-weight: 400;
   src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* montserrat-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
 
   /* MODAL */
   /* The Modal (background) */
@@ -109,9 +101,11 @@
   }
   body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+   /* font-family: 'Montserrat', sans-serif; */
     height: 100%;
     background: url('../cork-wallet.png' );
+    font-family: sans-serif;
+
     /*    position: fixed;*/
   }
   img, svg {
@@ -141,7 +135,7 @@
   }
 
   nav {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
     font-weight: 200;
     width: 100%;
     position: fixed;
