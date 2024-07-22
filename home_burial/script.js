@@ -83,8 +83,15 @@ $('footer').css('color', 'black')
   document.body.scrollTop = 0; // For Safari
  
   }
-gsap.to("#first", {duration: 5, text: "traditional", autoAlpha: 1, delay: 1});
-gsap.to("#second", {duration: 6, text: "burial", delay: 2});
+gsap.to("#first", {
+  duration: 5,
+ //text: "traditional", 
+  autoAlpha: 1, 
+  delay: 1});
+gsap.to("#second", {
+  duration: 6, 
+  // text: "burial", 
+  delay: 2});
 
 const myTimeout = setTimeout(fade, 1);
 
