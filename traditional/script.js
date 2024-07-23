@@ -185,8 +185,7 @@ erf_fade.pause();
     ]
 var texty = [
   
-  `<p>Embalming is common practice in the U.S. It is rarely done in other countries. The  process involves draining all of the fluids and blood from the body and replacing them with a chemical solution to slow down decomposition. It’s important to know that embalming is not required by law, nor does it “sanitize” a body, or make it safer to be around. Dead bodies pose no public health risk. Embalming can be a helpful option if a body needs to be sent to a different country, or a family needs extra time to arrange a funeral. As an alternative, refrigeration can be used to delay the decomposition process.
-  </p>`,
+  `<p>Embalming is common practice in the U.S. It is rarely done in other countries. The  process involves draining all of the organs and blood from the body and replacing them with a chemical solution to slow down decomposition. Embalming is not required by law, nor does it “sanitize” a body or make it safer to be around. Dead bodies pose no public health risk.</p>`,
   
    `<p>Most caskets are made from hardwood, metals, and other synthetic materials. While some “sealer,” “protective,” or “gasketed” models may claim to preserve bodies by hermetically sealing them, the lack of air can create an environment that results in accelerated decomposition. No amount of embalming or special caskets can prevent decay; our bodies will eventually decompose as nature intended us to.</p>`,
 //3

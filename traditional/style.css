@@ -72,11 +72,11 @@
     }
     #acc svg {
       max-width: 100%;
-      transform:scale(1.5);
+      /* transform:scale(1.5); */
       width: 38px;
       height:38px;
     }
-    
+
     .btn {
       width: 38px;
       height: 38px;
@@ -154,6 +154,7 @@ position:absolute;
 @media all and (max-width: 1024px) {
    .traditional {
        padding-left: 0;
+       padding-top: 90px;
     }
     
 }
@@ -561,19 +562,26 @@ align-items: center;
        
        min-height: 230px;
       max-height: 360px;
+      font-size:.9em;
 
 }
 #title, #text {
   width: 100vw;
   padding: 0 12px;
+  font-size:0.9em;
   background: rgba(255,255,255,.7);
 
 }
 #summarytext, #summarytitle {
-  padding: 0 12px;
+  /* padding: 0 12px; */
+  font-size:0.9em;
+  width: 100vw;
+
 }
 #title p, #text p, #summarytext {
   padding: 0 24px;
+  font-size:0.9em;
+
 }
 }
 

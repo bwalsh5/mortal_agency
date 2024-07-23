@@ -204,10 +204,10 @@ erf.to('#globe path', {
   new fullpage('#fullpage', {
 
     licenseKey: "B80L9-WCO9J-7K117-18AJK-VEQXP",
-    responsiveHeight: 410,
-    fitToSection: true,
+    // responsiveHeight: 410,
+    // fitToSection: true,
     keyboardScrolling: true,
-    verticalCentered: true,
+    // verticalCentered: true,
     lazyLoading: true,
     onLeave: function(origin, destination, direction){
       // var leavingSection = this;
@@ -223,31 +223,31 @@ erf.to('#globe path', {
             //  }
 
   
-    if(origin.index == 7 && direction =='down'){
+    if(origin.index == 6 && direction =='down'){
     bars.play()
       }
         
-      if(origin.index == 9 && direction =='down'){
+      if(origin.index == 8 && direction =='down'){
        cash.play()
 //        $('.gravestone').css('animation-play-state', 'running');
       }
   
-      if(origin.index == 10 && direction =='down'){
+      if(origin.index == 9 && direction =='down'){
 
     tree.play();
 
     }
-          if(origin.index == 11 && direction =='down'){
+          if(origin.index == 10 && direction =='down'){
 
     fam.play();
 
     }   
-                if(origin.index == 12 && direction =='down'){
+                if(origin.index == 11 && direction =='down'){
 
     rel.play();
 
     }  
-                      if(origin.index == 13 && direction =='down'){
+                      if(origin.index == 12 && direction =='down'){
 
     erf.play();
 
