@@ -97,6 +97,7 @@ body {
       flex: 0 0 38px;
       -webkit-appearance: none;
       color: black;
+      padding:0;
     }
 .btn img {
   width: 38px;

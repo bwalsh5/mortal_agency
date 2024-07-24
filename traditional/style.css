@@ -80,6 +80,8 @@
       align-items: center;
       flex: 0 0 38px;
       color: black;
+      -webkit-appearance: none;
+      padding:0;
     }
 
     /* END VIZ */

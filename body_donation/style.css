@@ -78,6 +78,7 @@ body {
           flex: 0 0 38px;
           -webkit-appearance: none;
           color: black;
+          padding:0;
         }
           /* MODAL */
       /* The Modal (background) */
@@ -530,7 +531,7 @@ svg {
 }
 @media all and (max-width: 1200px) {
 .lister svg {
-max-width: 30vw;
+  max-width: 800px;
 }
 }
 
