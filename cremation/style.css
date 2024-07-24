@@ -98,12 +98,7 @@ visibility:hidden;
     overflow: hidden;
     display:flex;
     }
-    #acc svg {
-      width:38px;
-      height:38px;
-      transform:scale(1.5);
-    }
-    
+
     .btn {
       width: 38px;
       height: 38px;
@@ -359,6 +354,7 @@ main {
 	width: 1300vw;
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
+  overflow-y: hidden;
 }
 @media (max-width: 1024px) {
 
@@ -464,6 +460,34 @@ margin-bottom: 2px;
     min-height: 74px;
   }
 }
+
+/* new styles using source-detect  - they work on iphone 15 pro max? */
+.mobile header, .mobile footer {
+  width: 80vw;
+  background: rgba(255,255,255,.7);
+
+}
+.mobile header, .mobile footer, .mobile #summarytext, .mobile #summarytitle {
+  padding: 0 12px;
+}
+.mobile footer {
+  height: 120px;
+  max-height: 120px;
+  min-height: 120px;
+  /* justify-content: center; */
+  /* align-items: center; */
+margin-bottom: 2px;
+  /* padding: 2px; */
+}
+.mobile header {
+  height:74px;
+  max-height: 74px;
+  min-height: 74px;
+}
+
+
+
+
 .bold {
   font-weight: 900;
 }
@@ -517,10 +541,12 @@ svg {
 /* 	display: block; */
 
 }
-
-@media all and (max-width: 800px) {
 .lister svg {
-width: 320px;
+  flex: 0 0 240px;
+}
+@media all and (max-width: 1200px) {
+.lister svg {
+max-width: 30vw;
 }
 }
 

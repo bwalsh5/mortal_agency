@@ -74,12 +74,7 @@ body {
         overflow: hidden;
         display: flex;
         }
-        #acc svg {
-          width: 38px;
-          height:38px;
-          transform:scale(1.5);
-        }
-        
+     
         .btn {
           width: 38px;
           height: 38px;
@@ -356,6 +351,7 @@ main {
 	width: 1300vw;
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
+  overflow-y: hidden;
 }
 @media (max-width: 1024px) {
 
@@ -519,10 +515,13 @@ svg {
 /* 	display: block; */
 
 }
-
-@media all and (max-width: 800px) {
 .lister svg {
-width: 320px;
+flex: 0 0 240px;
+
+}
+@media all and (max-width: 1200px) {
+.lister svg {
+max-width: 30vw;
 }
 }
 

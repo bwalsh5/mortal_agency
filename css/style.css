@@ -28,16 +28,7 @@
   height: 120px; */
   overflow: hidden;
   }
-  #acc svg {
-    /* max-width: 100%; */
-    width:38px;
-    height:38px;
-    transform:scale(1.5);
-    -webkit-appearance: none;
-    flex: 0 0 auto;
-  
 
-  }
   
   .btn {
     width: 38px;
@@ -49,6 +40,12 @@
     flex: 0 0 38px;
     -webkit-appearance: none;
     color:black;
+  }
+  @media all and (max-width:800px) {
+
+    .btn {
+      font-size: 20px;
+    }
   }
 
   /* END VIZ */
@@ -155,6 +152,7 @@ justify-content: flex-end;
   position: relative;
 
   max-width: 35vw;
+  flex: 0 0 320px;
   /* top: -180px; */
 }
 
@@ -169,6 +167,7 @@ justify-content: flex-end;
         width: 100%;
         top: 0;
         max-width: 100%;
+        flex: 0 0 180px;
     }
 }
 #american {
@@ -1101,21 +1100,13 @@ width: 100%;
   }
   #bottomNav li {
 width:100%;
+height: auto;
+padding: 6px;
   }
   .warning {
     padding-top:20px;
   }
-}
 
-
-@media all and (max-width: 800px) {
-
-  #bottomNav {
-    grid-template-columns: 25vw 25vw;
-    justify-content: center;
-
-
-}
 }
 /*media queries*/
 

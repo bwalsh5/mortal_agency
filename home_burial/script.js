@@ -262,6 +262,7 @@ function zero() {
       document.getElementById('text').style.display =  "none";
       document.getElementById('coffin').style.display =  "none";
       document.getElementById('title').style.display =  "none";
+      document.getElementById('fade').style.display =  "none";
 
     }
 
@@ -271,11 +272,11 @@ function zero() {
     //mm
     
   let mm = gsap.matchMedia();
-mm.add("(min-width: 800px)", () => {  
+mm.add("(min-width: 1200px)", () => {  
         gsap.set('#vaultFront', {top: "4vh"})
 
 });
-mm.add("(max-width: 799px)", () => {
+mm.add("(max-width: 1199px)", () => {
           gsap.set('#vaultFront', {top: "2vh"})
 // mobile setup code here...
     });
@@ -499,7 +500,7 @@ ScrollTrigger.create({
 
 });
   let mm2 = gsap.matchMedia();
-mm2.add("(min-width: 800px)", () => {  
+mm2.add("(min-width: 1200px)", () => {  
 //desktop
 ScrollTrigger.create({
   trigger: "#coffin",
@@ -512,7 +513,7 @@ onEnter: one,
   onLeaveBack: zero,
 });
     });
-mm2.add("(max-width: 799px)", () => {    
+mm2.add("(max-width: 1199px)", () => {    
 //mobile
 ScrollTrigger.create({
   trigger: "#coffin",
@@ -528,7 +529,7 @@ onEnter: one,
  });   
     
   let mm3 = gsap.matchMedia();
-mm3.add("(min-width: 800px)", () => {  
+mm3.add("(min-width: 1200px)", () => {  
 //desktop
 ScrollTrigger.create({
   trigger: "#vault",
@@ -541,7 +542,7 @@ ScrollTrigger.create({
    // toggleActions: "restart pause resume pause"
 });
   });
-mm3.add("(max-width: 799px)", () => {    
+mm3.add("(max-width: 1199px)", () => {    
 //mobile
   ScrollTrigger.create({
   trigger: "#vault",
@@ -560,7 +561,7 @@ mm3.add("(max-width: 799px)", () => {
     let mm4 = gsap.matchMedia();
 
 
-    mm4.add("(min-width: 800px)", () => {  
+    mm4.add("(min-width: 1200px)", () => {  
       ScrollTrigger.create({
         trigger: "#grass",
         start: "center 20%",
@@ -575,7 +576,7 @@ mm3.add("(max-width: 799px)", () => {
           //probs the same with the ones above, too.
       });
       });
-      mm4.add("(max-width: 799px)", () => {  
+      mm4.add("(max-width: 1199px)", () => {  
         ScrollTrigger.create({
           trigger: "#grass",
           start: "center 20%",

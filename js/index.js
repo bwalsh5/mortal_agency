@@ -69,7 +69,7 @@ bars
 //	stagger: .3
 	})
 .to(
-	'#cremation',{
+	'#cremationbar',{
 	width:"57.5%",
 		borderWidth: "2px",
 	ease: "none",
@@ -77,7 +77,7 @@ bars
 },1)
 
 .to(
-	'#burial',{
+	'#burialbar',{
 	width:"36.6%",
 		borderWidth: "2px",
 	ease: "none",

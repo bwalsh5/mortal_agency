@@ -27,13 +27,7 @@
     height: 120px; */
     overflow: hidden;
     }
-    #acc svg {
-      width: 38px;
 
-    height 38px;
-    
-      transform:scale(1.5);
-    }
     
     .btn {
       width: 38px;

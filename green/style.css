@@ -86,12 +86,7 @@ body {
     height: 120px; */
     overflow: hidden;
     }
-    #acc svg {
-     width:38px;
-     height: 38px;
-      transform:scale(1.5);
-    }
-    
+
     .btn {
       width: 38px;
       height: 38px;
@@ -689,12 +684,14 @@ width: 100%;
 	stroke-width:2;
 }
 .lister svg {
-  max-width: 10vw;
+  /* max-width: 10vw; */
+flex: 0 0 240px;
 /*    margin-bottom: 320px;*/
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
  .lister svg {
+
   max-width: 30vw;
 /*    margin-bottom: 320px;*/
 } 

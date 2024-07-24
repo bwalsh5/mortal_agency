@@ -448,11 +448,11 @@ gsap.to('#green', 3, {fill: "#7fc241",  delay: 1});
     
 
     let mm = gsap.matchMedia();
-mm.add("(min-width: 800px)", () => {  
+mm.add("(min-width: 1200px)", () => {  
         gsap.set('#vaultFront', {top: "4vh"})
 
 });
-mm.add("(max-width: 799px)", () => {
+mm.add("(max-width: 1199px)", () => {
           gsap.set('#vaultFront', {top: "2vh"})
 // mobile setup code here...
     });
@@ -518,7 +518,7 @@ ScrollTrigger.create({
 
 let mm2 = gsap.matchMedia();
 
-mm2.add("(min-width: 800px)", () => {  
+mm2.add("(min-width: 1200px)", () => {  
 //desktop
 ScrollTrigger.create({
   trigger: "#coffin",
@@ -532,7 +532,7 @@ onEnter: one,
 });
     });
     
-    mm2.add("(min-device-width: 768px) && (max-device-width: 1024px) && (-webkit-min-device-pixel-ratio: 2)", () => {    
+    mm2.add("(min-device-width: 768px) && (max-device-width: 1199px) && (-webkit-min-device-pixel-ratio: 2)", () => {    
       //mobile
       ScrollTrigger.create({
         trigger: "#coffin",
@@ -547,7 +547,7 @@ onEnter: one,
       
        });  
 
-mm2.add("(max-width: 799px)", () => {    
+mm2.add("(max-width: 1199px)", () => {    
 //mobile
 ScrollTrigger.create({
   trigger: "#coffin",
@@ -563,7 +563,7 @@ onEnter: one,
  });   
     
   let mm3 = gsap.matchMedia();
-mm3.add("(min-width: 800px)", () => {  
+mm3.add("(min-width: 1200px)", () => {  
 //desktop
 ScrollTrigger.create({
   trigger: "#vault",
@@ -576,7 +576,7 @@ ScrollTrigger.create({
    // toggleActions: "restart pause resume pause"
 });
   });
-  mm3.add("(min-device-width: 768px) && (max-device-width: 1024px) && (-webkit-min-device-pixel-ratio: 2)", () => {    
+  mm3.add("(min-device-width: 768px) && (max-device-width: 1199px) && (-webkit-min-device-pixel-ratio: 2)", () => {    
     //mobile
     ScrollTrigger.create({
       trigger: "#vault",
@@ -590,7 +590,7 @@ ScrollTrigger.create({
     });
     
      }); 
-mm3.add("(max-width: 799px)", () => {    
+mm3.add("(max-width: 1199px)", () => {    
 //mobile
   ScrollTrigger.create({
   trigger: "#vault",
@@ -607,7 +607,7 @@ mm3.add("(max-width: 799px)", () => {
 
 
 
-mm3.add("(min-width: 800px)", () => {  
+mm3.add("(min-width: 1200px)", () => {  
 ScrollTrigger.create({
   trigger: "#grass",
   start: "center 300%",
@@ -621,7 +621,7 @@ ScrollTrigger.create({
     //probs the same with the ones above, too.
 });
 });
-mm3.add("(max-width: 799px)", () => {  
+mm3.add("(max-width: 1199px)", () => {  
   ScrollTrigger.create({
     trigger: "#grass",
     start: "center 20%",

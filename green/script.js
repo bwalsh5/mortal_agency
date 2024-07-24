@@ -179,11 +179,6 @@ var texty = [
 `<p>If you visit a green cemetery, you will be overwhelmed by how lush the growth is.</p> `,
 
 
-
-
-// `even after a few days. Refridgeration and dry ice can prevent decay long enough for a viewing. Any Funeral Director that tells you otherwise is not working in your best interest.</p>
-//<p>Many funeral homes don’t offer refridgeration because they want you to pay for the more costly option: embalming.</p> `,
-
 `<ul>
 
 <li>There are no fees for embalming or vaults,</li>
@@ -221,21 +216,21 @@ Only completely biodegradeable material is allowed to be buried.</p>
 document.getElementById('title').innerHTML = titles[0];
 document.getElementById('text').innerHTML = texty[0]; 
     
- const tl = gsap.timeline({ 
-    paused: true,
-    defaults: { duration: 1.5 }
-})
- tl.add(
-gsap.to("#vault", { opacity: 0, delay: 0.5 }, 1.5)
+//  const tl = gsap.timeline({ 
+//     paused: true,
+//     defaults: { duration: 1.5 }
+// })
+//  tl.add(
+// gsap.to("#vault", { opacity: 0, delay: 0.5 }, 1.5)
 
-     )    
-function fadeVaultOut(){ 
-        tl.play()  
-    }
+//      )    
+// function fadeVaultOut(){ 
+//         tl.play()  
+//     }
     
-function fadeVaultIn(){ 
-        tl.reverse()   
-    }   
+// function fadeVaultIn(){ 
+//         tl.reverse()   
+//     }   
 function zero() {
          document.getElementById('title').innerHTML = titles[0];
         document.getElementById('text').innerHTML = texty[0]; 
@@ -243,14 +238,14 @@ function zero() {
     function one() {
         document.getElementById('title').innerHTML = titles[1];
         document.getElementById('text').innerHTML = texty[1];   
-      fadeVaultIn();
+      // fadeVaultIn();
     }
 
     
    function two() {
         document.getElementById('title').innerHTML = titles[2];
         document.getElementById('text').innerHTML = texty[2];  
-             fadeVaultOut();
+            //  fadeVaultOut();
 
     }
 
@@ -286,32 +281,22 @@ function zero() {
     
 
   function nine() {
-    // document.getElementById('title').innerHTML = titles[9];  
-    // document.getElementById('text').innerHTML = texty[9]; 
-      // document.getElementById('nav').style.display =  "none";
-
-      // document.getElementById('text').style.display =  "none";
-
-      // document.getElementById('title').style.display =  "none";
-      document.getElementById('fade').style.display =  "none";
-      document.getElementById('coffin').style.display =  "none";
-
+ 
+      // document.getElementById('fade').style.display =  "none";
+      // document.getElementById('coffin').style.display =  "none";
+      gsap.to('#coffin', { autoAlpha: 0});
+      gsap.to('#fade', { autoAlpha: 0});
 
     }
 
-function ten() {
-// gsap.to('#summary_grid', { autoAlpha: 0});
-gsap.to('#coffin', { autoAlpha: 0});
-gsap.to('#fade', { autoAlpha: 0});
 
-}
 
 //  gsap.set('.arrow', {rotation: 180})
 //  gsap.set('#arrowBox', {opacity: 0})
 gsap.set('#coffinFront', {scale: 1.1})
 gsap.set('#coffinBack', {scale: 1.1})
-gsap.set('#vaultFront', {scale: 1.15})
-gsap.set('#vaultBack', {scale: 1.15, top: -30})
+// gsap.set('#vaultFront', {scale: 1.15})
+// gsap.set('#vaultBack', {scale: 1.15, top: -30})
 gsap.set('#globe', {scale: 0.5})
 
 gsap.to('#arrowBox', {autoAlpha:1,
@@ -529,7 +514,7 @@ ScrollTrigger.create({
 
 let mm = gsap.matchMedia();
 
-mm.add("(min-width: 800px)", () => {
+mm.add("(min-width: 1200px)", () => {
   // desktop setup code here...
     ScrollTrigger.create({
   trigger: "#fade",
@@ -543,7 +528,7 @@ mm.add("(min-width: 800px)", () => {
 });
 });
 
-mm.add("(max-width: 799px)", () => {
+mm.add("(max-width: 1199px)", () => {
   // mobile setup code here...
     
 ScrollTrigger.create({
@@ -591,31 +576,31 @@ onEnter: one,
 
 
     
-ScrollTrigger.create({
-  trigger: "#vaultFront",
-  start: "center 56%",
-  endTrigger: "#end",
-  pin: true,
-  pinSpacing: false,
-         onEnter: two,
-  onLeaveBack:two
+// ScrollTrigger.create({
+//   trigger: "#vaultFront",
+//   start: "center 56%",
+//   endTrigger: "#end",
+//   pin: true,
+//   pinSpacing: false,
+//          onEnter: two,
+//   onLeaveBack:two
                   
-});
+// });
 
-ScrollTrigger.create({
-  trigger: "#vaultBack",
-  start: "center 52%",
-  endTrigger: "#end",
-  pin: true,
-  pinSpacing: false,
-     onEnter: two,
-  onLeaveBack:two
+// ScrollTrigger.create({
+//   trigger: "#vaultBack",
+//   start: "center 52%",
+//   endTrigger: "#end",
+//   pin: true,
+//   pinSpacing: false,
+//      onEnter: two,
+//   onLeaveBack:two
 
-  });
+//   });
 
   let mm3 = gsap.matchMedia();
 
-  mm3.add("(min-width: 800px)", () => {  
+  mm3.add("(min-width: 1200px)", () => {  
     ScrollTrigger.create({
       trigger: "#grass",
       start: "center 18%",
@@ -629,7 +614,7 @@ ScrollTrigger.create({
         //probs the same with the ones above, too.
     });
     });
-    mm3.add("(max-width: 799px)", () => {  
+    mm3.add("(max-width: 1199px)", () => {  
       ScrollTrigger.create({
         trigger: "#grass",
         start: "center 18%",
@@ -721,8 +706,8 @@ ScrollTrigger.create({
      end: "#end",
   pin: true,
   pinSpacing: false,
-    onEnter: nine,
-    onLeaveBack: nine
+    // onEnter: nine,
+    // onLeaveBack: nine
     //toggleActions: "restart pause resume pause"
 });
 
