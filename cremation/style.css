@@ -42,6 +42,20 @@ header, footer, #name {
 visibility:hidden;
 }
 
+@media all and (max-width:800px) {
+
+  #back {
+  top: 30%;
+  }
+  #front {
+    top: 30%;
+
+  }
+}
+
+
+
+
  /* MODAL */
   /* The Modal (background) */
   .modal {
@@ -66,7 +80,7 @@ visibility:hidden;
     width: 50%; 
     font-size: 1.2em;
   }
-  @media all and (max-width: 800px) {
+  @media all and (max-width: 1200px) {
     .modal-content {
     margin: 5% auto;
     }
@@ -155,7 +169,7 @@ top: 1em;
 
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 	#name {
     top: 1.4em;
 		font-size: 3em;
@@ -326,7 +340,7 @@ nav li:focus-within a {
   font-size: 20px;
   text-align: left;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 
   #menu {
     top: 86px;
@@ -352,7 +366,7 @@ main {
 	margin-top: 5%;
 	padding: 0;
 	height: 90%;
-	width: 1300vw;
+	width: 1800vw;
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
   overflow-y: hidden;
@@ -379,7 +393,7 @@ section {
 	justify-content:center;
 	align-items: center;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 	
 	section {
 		margin-right: 40vw
@@ -436,7 +450,7 @@ footer::-webkit-scrollbar-thumb {
   background-color: rgba(0,0,0,.5);
   -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 	
 	header, footer {
 		width: 80vw;
@@ -515,7 +529,7 @@ margin-bottom: 2px;
 	margin-top: -16px;
 	transform: rotate(90deg);
 }
-@media all and (max-width: 800px ) {
+@media all and (max-width: 1200px ) {
     .arrow {
         font-size: 1.5em;
     margin-top: -12px;
@@ -547,7 +561,8 @@ svg {
 }
 @media all and (max-width: 1200px) {
 .lister svg {
-  max-width: 800px;
+
+  max-width: 240px;
 }
 }
 
@@ -668,7 +683,7 @@ align-items: center;
     padding-left:2px;
     /* font-size:0.5em; */
   }
-  @media all and (max-width: 800px) {
+  @media all and (max-width: 1200px) {
   .dot {
     font-size: 0.5em;
   }

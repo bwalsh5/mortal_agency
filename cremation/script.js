@@ -239,7 +239,7 @@ fader.to('#svg path', {
 
 let mm = gsap.matchMedia();
     
-mm.add("(min-width: 800px)", () => {
+mm.add("(min-width: 1200px)", () => {
 gsap.set('#money svg, #env svg, #rel svg', {
 	scale: 0.2
 });
@@ -247,7 +247,7 @@ gsap.set('#fam svg, #globe svg', {
 	scale: 0.1
 });
 });
-mm.add("(max-width: 799px)", () => {  
+mm.add("(max-width: 1199px)", () => {  
 	gsap.set('#money svg, #env svg, #rel svg', {
 	scale: 0.35
 });
@@ -261,7 +261,7 @@ gsap.set('#fam svg, #globe svg', {
 	})
   gsap.set('#dot, #square, #oval', {
     transformOrigin: "center center",
-    scale: 0.65
+    scale: 0.45
   })
   gsap.set('footer p', {
         fontSize: "1em"
@@ -269,6 +269,13 @@ gsap.set('#fam svg, #globe svg', {
 	
 });
 
+mm.add("(max-width: 799px)", () => {  
+//phone styles here
+gsap.set('#oval', {
+  // y:20,
+  // yPercent: -20
+})
+})
 mm.add("(max-width: 599px)", () => {  
 		gsap.set('#oval', {
 		 y: 120,

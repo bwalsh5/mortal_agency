@@ -328,7 +328,7 @@ nav li .comingSoon {
   font-size: 20px;
   text-align: left;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 
   #menu {
     padding-top: 20px;
@@ -414,7 +414,7 @@ visibility: hidden;
 	font-size: 1.2em;
 	margin-top: -16px;
 }
-@media all and (max-width: 800px ) {
+@media all and (max-width: 1200px ) {
     .arrow {
         font-size: 1.5em;
     margin-top: -12px;
@@ -489,7 +489,7 @@ text-align: center;
     /* top: -18px; */
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 
   #title, #text {
     width: 100vw;
@@ -505,7 +505,18 @@ max-width: 65vw;
   }
 }
 
-
+@media all and (max-width: 799px) {
+  #fade, #coffin {
+     /* change */
+    width: 40vw;
+  }
+  #vault {
+     
+ /* change */
+      width: 58vw;
+  }
+  
+}
 
 #grass {
   position: relative;
@@ -525,7 +536,7 @@ width: 100%;
   /* background: linear-gradient(to bottom, rgba(138,152, 80, .8) 4%, rgba(63,57, 47, .6)); */
 
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
   #grass {
       height: 60px;
 }
@@ -536,7 +547,7 @@ width: 100%;
   }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
   #flower_holder svg {
   max-width: 50px;     
      
@@ -550,7 +561,7 @@ width: 100%;
   } */
 }
 
-.lister {
+.lister, .notlister {
     width: 100vw;
     height: 100vh;
 }
@@ -563,7 +574,7 @@ width: 100%;
     justify-content: flex-start;
 
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
   #sixthLister {
     height: calc(100vh - env(safe-area-inset-bottom));
     /* height: 100%; */
@@ -647,7 +658,7 @@ width: 100%;
   width: 25%;
   max-width: 25%;
   }
-  @media all and (max-width: 800px) {
+  @media all and (max-width: 1200px) {
 
     #summary_grid section {
     padding: 2px 5px;
@@ -671,7 +682,7 @@ width: 100%;
   padding-left:2px;
   font-size: 0.5em;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 .dot {
   /* font-size: 1em; */
   padding-left: 0;
@@ -693,7 +704,13 @@ flex: 0 0 240px;
 @media all and (max-width: 1200px) {
  .lister svg {
 
-  max-width: 30vw;
+  max-width: 240px;
+/*    margin-bottom: 320px;*/
+} 
+}
+@media all and (max-width: 800px) {
+  .lister svg {
+   max-width: 180px;
 /*    margin-bottom: 320px;*/
 } 
 }

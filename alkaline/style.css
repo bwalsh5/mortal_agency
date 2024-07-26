@@ -522,6 +522,7 @@ flex: 0 0 240px;
 }
 @media all and (max-width: 1200px) {
 .lister svg {
+  flex: 0 0 800px;
   max-width: 800px;
 }
 }

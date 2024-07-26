@@ -24,7 +24,17 @@ const PRECACHE_URLS = [
   'css/style.css',
   'js/index.js',
   'js/gsap.min.js',
-  'js/ScrollTrigger.min.js'
+  'js/ScrollTrigger.min.js',
+  'home_burial/index.html',
+  'traditional/index.html',
+  'cremation/index.html',
+  'alkaline/index.html',
+  'green/index.html',
+  'body_donation/index.html',
+  'composting/index.html',
+  'fullp.html',
+  'about.html'
+
 ];
 
 // The install handler takes care of precaching the resources we always need.

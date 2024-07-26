@@ -442,21 +442,7 @@ erf.to('#globe path', {
 
 gsap.to('#green', 3, {fill: "#7fc241",  delay: 1});
 
-//  gsap.set('.arrow', {rotation: 180})
-//  gsap.set('#arrowBox', {opacity: 0})
-    //mm
-    
 
-    let mm = gsap.matchMedia();
-mm.add("(min-width: 1200px)", () => {  
-        gsap.set('#vaultFront', {top: "4vh"})
-
-});
-mm.add("(max-width: 1199px)", () => {
-          gsap.set('#vaultFront', {top: "2vh"})
-// mobile setup code here...
-    });
-    
 gsap.set('#vaultFront', {scale: 0.8})
 gsap.set('#vaultBack', {scale: .8})
 
@@ -515,6 +501,17 @@ ScrollTrigger.create({
      onLeaveBack: zero
 
 });
+//mm
+let mm = gsap.matchMedia();
+mm.add("(min-width: 1200px)", () => {  
+        gsap.set('#vaultFront', {top: "4vh"})
+
+});
+
+mm.add("(max-width: 1199px)", () => {
+          gsap.set('#vaultFront', {top: "2vh"})
+// mobile setup code here...
+    });
 
 let mm2 = gsap.matchMedia();
 

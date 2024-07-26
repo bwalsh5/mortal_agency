@@ -65,6 +65,7 @@ position:relative;
     flex: 0 0 38px;
     -webkit-appearance: none;
     padding:0;
+    color: black;
   }
 
     /* MODAL */
@@ -274,7 +275,7 @@ nav li .comingSoon {
   font-size: 20px;
   text-align: left;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 
   #menu {
     padding-top: 20px;
@@ -333,7 +334,7 @@ font-weight: 900;
 	left: 1.5em;
 	top:1.4em;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 	#first {
     top: 2em;
   }
@@ -453,7 +454,7 @@ font-weight: 900;
     flex-direction: column;
     justify-content: flex-end;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
   #text {
   
   max-width: 100vw;
@@ -547,7 +548,7 @@ z-index: 9997;
    top: 0;
     left: 0;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
     #fade, #coffin {
         width: 60vw;
     }
@@ -560,6 +561,18 @@ z-index: 9997;
      top:55px;   
     }
     
+}
+@media all and (max-width: 799px) {
+  #fade, #coffin {
+     /* change */
+    width: 40vw;
+  }
+  #vault {
+     
+ /* change */
+      width: 62vw;
+  }
+  
 }
     
 /* #grass {
@@ -588,7 +601,7 @@ width: 100%;
   /* background: linear-gradient(to bottom, rgba(138,152, 80, .8) 4%, rgba(63,57, 47, .6)); */
 
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
   #grass {
       height: 60px;
 }
@@ -614,12 +627,19 @@ width: 100%;
    .lister svg {
 
 
-    max-width: 800px;
+    max-width: 240px;
+/*    margin-bottom: 320px;*/
+} 
+}
+@media all and (max-width: 800px) {
+  .lister svg {
+   max-width: 180px;
 /*    margin-bottom: 320px;*/
 } 
 }
 
-.lister {
+
+.lister, .notlister {
     width: 100vw;
     height: 100vh; 
 /*    background: rgba(0,255,0,.4);*/
@@ -666,7 +686,7 @@ width: 100%;
   max-width: 25%;
   }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 
   #summary_grid section {
   padding: 2px 5px;
@@ -686,7 +706,7 @@ width: 100%;
   padding-left:2px;
   font-size:0.5em;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 .dot {
   /* font-size: 1em; */
   padding-left:0;

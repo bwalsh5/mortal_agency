@@ -347,7 +347,7 @@ main {
 	margin-top: 5%;
 	padding: 0;
 	height: 90%;
-	width: 1300vw;
+	width: 1800vw;
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
   overflow-y: hidden;
@@ -531,6 +531,7 @@ svg {
 }
 @media all and (max-width: 1200px) {
 .lister svg {
+  flex: 0 0 800px;
   max-width: 800px;
 }
 }

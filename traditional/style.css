@@ -177,7 +177,7 @@ position:absolute;
     } 
    
 }
-    @media all and (max-width: 800px) {
+    @media all and (max-width: 1200px) {
 #second {
 
   left: 25vw;
@@ -344,7 +344,7 @@ nav li .comingSoon {
   font-size: 20px;
   text-align: left;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 
   #menu {
     top: 86px;
@@ -405,7 +405,7 @@ left: 3em;
 top:2em;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 	#first {
     top: 2em;
   }
@@ -499,7 +499,7 @@ top:2em;
 	font-size: 1.2em;
 	margin-top: -16px;
 }
-@media all and (max-width: 800px ) {
+@media all and (max-width: 1200px ) {
     .arrow {
         font-size: 1.5em;
     margin-top: -12px;
@@ -553,7 +553,7 @@ align-items: center;
  margin: 0 auto;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
    #text {
        
        min-height: 230px;
@@ -665,7 +665,8 @@ font-size:0.9em;
    top: 0;
     left: 0;
 }
-@media all and (max-width: 800px) {
+
+@media all and (max-width: 1200px) {
     #fade, #coffin {
         width: 60vw;
     }
@@ -675,6 +676,19 @@ font-size:0.9em;
         width: 92vw;
     }
     
+}
+
+@media all and (max-width: 799px) {
+  #fade, #coffin {
+     /* change */
+    width: 40vw;
+  }
+  #vault {
+     
+ /* change */
+      width: 62vw;
+  }
+  
 }
     
 #grass {
@@ -696,7 +710,7 @@ width: 100%;
     /* background: linear-gradient(to bottom, rgba(138,152, 80, .8) 4%, rgba(63,57, 47, .6)); */
 
 }
-  @media all and (max-width: 800px) {
+  @media all and (max-width: 1200px) {
     #grass {
         height: 60px;
 }
@@ -706,15 +720,20 @@ width: 100%;
         /* height: 160px; */
     }
 }
+
+
+
+
+
 #globe {
   transform: scale(0.6);
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
   #globe {
     transform: scale(0.5);
   }
 }
-.lister {
+.lister, .notlister {
     width: 100vw;
     height: 100vh;
     /* display: flex;
@@ -730,7 +749,7 @@ width: 100%;
     justify-content: flex-start;
 
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
   #sixthLister {
     height: calc(100vh - env(safe-area-inset-bottom));
     /* height: 100%; */
@@ -764,7 +783,7 @@ max-width: 25%;
 
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 
 #summary_grid section {
 padding: 2px 5px;
@@ -784,7 +803,7 @@ max-width: 85%;
   padding-left:2px;
   font-size: 0.5em;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
 .dot {
   /* font-size: 1em; */
   padding-left: 0;
@@ -819,7 +838,14 @@ border-radius: 4px;
 }
 @media all and (max-width: 1200px) {
    .lister svg {
-    max-width: 30vw;
+    max-width: 240px;
+/*    margin-bottom: 320px;*/
+} 
+}
+
+@media all and (max-width: 800px) {
+  .lister svg {
+   max-width: 180px;
 /*    margin-bottom: 320px;*/
 } 
 }
