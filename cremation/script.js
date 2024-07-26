@@ -241,22 +241,22 @@ let mm = gsap.matchMedia();
     
 mm.add("(min-width: 1200px)", () => {
 gsap.set('#money svg, #env svg, #rel svg', {
-	scale: 0.2
+	// scale: 0.2
 });
 gsap.set('#fam svg, #globe svg', {
-	scale: 0.1
+	// scale: 0.1
 });
 });
 mm.add("(max-width: 1199px)", () => {  
 	gsap.set('#money svg, #env svg, #rel svg', {
-	scale: 0.35
+	// scale: 0.35
 });
 gsap.set('#fam svg, #globe svg', {
-	scale: 0.2
+	// scale: 0.2
 });
 	gsap.set('#oval', {
-		  y:20,
-    yPercent: -50
+		  // y:20,
+    // yPercent: -50
 
 	})
   gsap.set('#dot, #square, #oval', {
@@ -269,6 +269,7 @@ gsap.set('#fam svg, #globe svg', {
 	
 });
 
+
 mm.add("(max-width: 799px)", () => {  
 //phone styles here
 gsap.set('#oval', {
@@ -278,8 +279,8 @@ gsap.set('#oval', {
 })
 mm.add("(max-width: 599px)", () => {  
 		gsap.set('#oval', {
-		 y: 120,
-    yPercent: -50
+		//  y: 120,
+    // yPercent: -50
 
 	})
 	

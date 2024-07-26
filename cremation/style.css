@@ -45,10 +45,10 @@ visibility:hidden;
 @media all and (max-width:800px) {
 
   #back {
-  top: 30%;
+  /* top: 30%; */
   }
   #front {
-    top: 30%;
+    /* top: 30%; */
 
   }
 }
@@ -363,10 +363,12 @@ nav li:focus-within a {
 main {
 	
 	margin:0;
-	margin-top: 5%;
+	/* margin-top: 5%; */
 	padding: 0;
+	margin-top: 5%;
+
 	height: 90%;
-	width: 1800vw;
+	width: 2000vw;
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
   overflow-y: hidden;
@@ -534,9 +536,9 @@ margin-bottom: 2px;
         font-size: 1.5em;
     margin-top: -12px;
     }
-}
 
 
+  }
 #dot {
 	width: 320px;
 /* 	border: 1px solid red; */
@@ -557,15 +559,20 @@ svg {
 
 }
 .lister svg {
-  flex: 0 0 240px;
+  flex: 0 0 220px;
+  max-width: 220px;
 }
 @media all and (max-width: 1200px) {
 .lister svg {
-
-  max-width: 240px;
+  /* transform:scale(0.6); */
 }
 }
-
+@media all and (max-width: 800px) {
+  .lister svg {
+    max-width: 120px;
+    /* transform:scale(0.4); */
+  }
+  }
 _::-webkit-full-page-media, _:future, :root .lister svg {
 
   /* width: 440px; */
