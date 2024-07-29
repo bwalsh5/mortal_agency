@@ -107,8 +107,8 @@ function fade() {
 
 gsap.set('#svg path', {
 	autoAlpha:0,
-	// scaleX:0,
-	// scaleY:0
+	scaleX:0,
+	scaleY:0
 });
 
 
@@ -118,18 +118,18 @@ fader.timeScale(5);
 
 fader.to('#svg path', {
 		autoAlpha:1,
-	// scaleX:"100%",
-	// scaleY:"100%",
+	scaleX:"100%",
+	scaleY:"100%",
 
 	stagger: .01
 	
 })
 
-gsap.to('nav', {
-  autoAlpha:1,
-  delay: 2,
-  duration: 2
-});
+// gsap.to('nav', {
+//   autoAlpha:1,
+//   delay: 2,
+//   duration: 2
+// });
 
 
  var titles = [
@@ -215,22 +215,7 @@ Only completely biodegradeable material is allowed to be buried.</p>
   
 document.getElementById('title').innerHTML = titles[0];
 document.getElementById('text').innerHTML = texty[0]; 
-    
-//  const tl = gsap.timeline({ 
-//     paused: true,
-//     defaults: { duration: 1.5 }
-// })
-//  tl.add(
-// gsap.to("#vault", { opacity: 0, delay: 0.5 }, 1.5)
-
-//      )    
-// function fadeVaultOut(){ 
-//         tl.play()  
-//     }
-    
-// function fadeVaultIn(){ 
-//         tl.reverse()   
-//     }   
+     
 function zero() {
          document.getElementById('title').innerHTML = titles[0];
         document.getElementById('text').innerHTML = texty[0]; 
@@ -293,8 +278,27 @@ function zero() {
 
 //  gsap.set('.arrow', {rotation: 180})
 //  gsap.set('#arrowBox', {opacity: 0})
-gsap.set('#coffinFront', {scale: 1.1})
-gsap.set('#coffinBack', {scale: 1.1})
+gsap.set('#coffinFront', {scale: 0.3})
+gsap.set('#coffinBack', {scale: 0.3})
+gsap.set('#fade', {scale: 0.3})
+
+
+let mmx = gsap.matchMedia();
+
+mmx.add("(max-width: 1200px)", () => {
+  gsap.set('#fade', {scale: 0.5})
+  gsap.set('#coffinFront', {scale: 0.5})
+  gsap.set('#coffinBack', {scale: 0.5})
+
+});
+
+mmx.add("(max-width: 799px)", () => {
+  gsap.set('#fade', {scale: 0.9})
+  gsap.set('#coffinFront', {scale: 0.9})
+  gsap.set('#coffinBack', {scale: 0.9})
+
+});
+
 // gsap.set('#vaultFront', {scale: 1.15})
 // gsap.set('#vaultBack', {scale: 1.15, top: -30})
 gsap.set('#globe', {scale: 0.5})
@@ -552,10 +556,7 @@ end: "#end",
   pin: true,
   pinSpacing: false, 
 onEnter: one,
-   // toggleActions: "restart pause resume pause"
   onLeaveBack: zero,
-  //  markers: true,
-//    scrub: true
 });
 
 ScrollTrigger.create({
@@ -567,36 +568,11 @@ end: "#end",
   pin: true,
   pinSpacing: false, 
 onEnter: one,
-  
    onLeaveBack: zero
-   // toggleActions: "restart pause resume pause"
-  //  markers: true,
-//    scrub: true
 });
 
 
-    
-// ScrollTrigger.create({
-//   trigger: "#vaultFront",
-//   start: "center 56%",
-//   endTrigger: "#end",
-//   pin: true,
-//   pinSpacing: false,
-//          onEnter: two,
-//   onLeaveBack:two
-                  
-// });
 
-// ScrollTrigger.create({
-//   trigger: "#vaultBack",
-//   start: "center 52%",
-//   endTrigger: "#end",
-//   pin: true,
-//   pinSpacing: false,
-//      onEnter: two,
-//   onLeaveBack:two
-
-//   });
 
   let mm3 = gsap.matchMedia();
 

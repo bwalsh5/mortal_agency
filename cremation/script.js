@@ -16,9 +16,7 @@ if (window.safari) {
 //   }
 
 //MODAL
-
 // Get the modal
-
 var modal = document.getElementById("myModal");
 // localStorage.setItem("modalshown", "1")
 
@@ -30,29 +28,20 @@ localStorage.setItem("modalshown", "1")
   modal.style.display = "none";
   // localStorage.setItem("modalshown", "0")
   // console.log('do not show modal')
-
 }
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-
 // When the user clicks on <span> (x), close the modal
-
-
 span.onclick = function() {
   modal.style.display = "none";
   fader.play();
-
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
-
 window.onscroll = function(){
 const scroll = window.scrollX
 if(scrollX > 300) {
@@ -61,23 +50,17 @@ if(scrollX > 300) {
 };
 //END MODAL
 //START VISIBILITY
-
-
 var resizeFont = function(d) {
   var el = $('html');
   $(el).css('font-size', parseInt($(el).css('font-size')) + d);  
   // $(el).css('line-height', parseInt($(el).css('line-height')) + d);  
-
 }
-
 $('#plus').click(function() {
 resizeFont(1);
 });
-
 $('#minus').click(function() {
 resizeFont(-1);
 }); 
-
 $('#color').click(function() {
 $('body').css('background', 'white')
 $('nav').css('background', 'white')
@@ -98,13 +81,13 @@ $('footer').css('color', 'black')
 }); 
 
 
-   gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
    // END VIZ
 
 gsap.set('#oval', {
 	visibility: "visible"
 })
-      gsap.set('#svg path, header, footer, #cremator', {
+gsap.set('#svg path, header, footer, #cremator', {
 	autoAlpha:0,
 })  
 // const portrait = window.matchMedia("(orientation: portrait)").matches;
@@ -220,12 +203,9 @@ let texty = [
 document.getElementById('header').innerHTML = titles[0];
 document.getElementById('pooter').innerHTML = texty[0];
 
-
-
 gsap.set('#arrowBox', {
 	y: "-20vh"
 })
-
 
 let fader = new gsap.timeline({delay:4});
 

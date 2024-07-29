@@ -102,7 +102,7 @@ gsap.set('#oval, #svg', {
 	visibility: "visible"
 })
       gsap.set('#svg path, header, footer', {
-	autoAlpha:0,
+	autoAlpha:0
 })  
 //const portrait = window.matchMedia("(orientation: portrait)").matches;
 
@@ -241,26 +241,26 @@ let mm = gsap.matchMedia();
     
 mm.add("(min-width: 800px)", () => {
 gsap.set('#money svg, #env svg, #rel svg', {
-	scale: 0.2
+	// scale: 0.2
 });
 gsap.set('#fam svg, #globe svg', {
-	scale: 0.1
+	// scale: 0.1
 });
 gsap.set('#oval', {
-  scale: 1.25,
-  y: 180
+  // scale: 1.25,
+  // y: 180
 })
 });
 mm.add("(max-width: 799px)", () => {  
 	gsap.set('#money svg, #env svg, #rel svg', {
-	scale: 0.35
+	// scale: 0.35
 });
 gsap.set('#fam svg, #globe svg', {
-	scale: 0.2
+	// scale: 0.2
 });
 	gsap.set('#oval', {
-		  y:120,
-    yPercent: -50
+		  // y:120,
+    // yPercent: -50
 
 	})
   gsap.set('#dot, #square, #oval', {

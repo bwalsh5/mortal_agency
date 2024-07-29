@@ -172,7 +172,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 9999;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 nav a {
   text-decoration: none;
@@ -446,13 +446,13 @@ visibility: hidden;
     text-align: center;
     position: relative;
     z-index: 8000;
-    max-width: 30vw;
+    /* max-width: 30vw; */
     margin: 0 auto;
 }
 #coffin {
 text-align: center;
 position: relative;
-max-width: 35vw;
+/* max-width: 35vw; */
 margin: 0 auto;
 
 }
@@ -468,39 +468,13 @@ z-index: 7999;
     width: 100%;
 }
 
-#vault {
-text-align: center;
- position: relative;
-    opacity: 0.8;
-    max-width: 40vw;
-    margin: 0 auto;
-
-}
-#vaultFront {
-  position: absolute;
-    width: 100%;
-    z-index: 9901;
-
-}
-#vaultBack {
-      position: absolute;
-  z-index: 1;
-    width: 100%;
-    /* top: -18px; */
-}
-
 @media all and (max-width: 1200px) {
 
-  #title, #text {
-    width: 100vw;
-    padding: 0 12px;
-    background: rgba(255,255,255,.7);
 
-  }
   #summarytext, #summarytitle {
     padding: 0 12px;
   }
-  #fade, #coffin, #vault {
+  #fade, #coffin {
 max-width: 65vw;
   }
 }
@@ -510,12 +484,13 @@ max-width: 65vw;
      /* change */
     width: 40vw;
   }
-  #vault {
-     
- /* change */
-      width: 58vw;
+  #title, #text{
+    width: 100vw;
+    padding: 0 12px;
+    background: rgba(255,255,255,.7);
+
   }
-  
+
 }
 
 #grass {
@@ -547,19 +522,6 @@ width: 100%;
   }
 }
 
-@media all and (max-width: 1200px) {
-  #flower_holder svg {
-  max-width: 50px;     
-     
-}
-  #flower_holder {
-    top:-30px;  
-  }
-  /* #green {
-    top: 45px;
-  
-  } */
-}
 
 .lister, .notlister {
     width: 100vw;
@@ -655,8 +617,8 @@ width: 100%;
   /* margin: 0 auto; */
 }
 #summary_grid section svg{
-  width: 25%;
-  max-width: 25%;
+  width:45px
+
   }
   @media all and (max-width: 1200px) {
 
@@ -667,11 +629,7 @@ width: 100%;
     #summary_grid section {
     min-width: 32px
     }
-    #summary_grid section svg{
-      width: 85%;
-    max-width: 85%;
-    
-    }
+
     }
 #consider {
  font-weight: normal;
@@ -696,21 +654,21 @@ width: 100%;
 	stroke-width:2;
 }
 .lister svg {
-  /* max-width: 10vw; */
-flex: 0 0 240px;
+  max-width: 120px;
+flex: 0 0 120px;
 /*    margin-bottom: 320px;*/
 }
 
 @media all and (max-width: 1200px) {
  .lister svg {
 
-  max-width: 240px;
+  max-width: 120px;
 /*    margin-bottom: 320px;*/
 } 
 }
 @media all and (max-width: 800px) {
   .lister svg {
-   max-width: 180px;
+   max-width: 120px;
 /*    margin-bottom: 320px;*/
 } 
 }

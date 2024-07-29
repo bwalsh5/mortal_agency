@@ -104,7 +104,6 @@ gsap.set('#svg path', {
 	scaleY:0
 })
 
-
 let fader = new gsap.timeline({delay:8});
 
 fader.timeScale(8); 
@@ -266,24 +265,35 @@ function zero() {
 
     }
 
+//////
 
+gsap.set('#coffinFront', {scale: 0.6})
+  gsap.set('#coffinBack', {scale: 0.6})
+  gsap.set('#fade', {scale: 0.5})
+
+  let mmx = gsap.matchMedia();
+  
+  mmx.add("(max-width: 1200px)", () => {
+    gsap.set('#fade', {scale: 0.5})
+    gsap.set('#coffinFront', {scale: 0.6})
+    gsap.set('#coffinBack', {scale: 0.6})
+
+  });
+  
+  mmx.add("(max-width: 799px)", () => {
+    gsap.set('#fade', {scale: 0.9})
+    gsap.set('#coffinFront', {scale: 1.0})
+    gsap.set('#coffinBack', {scale: 1.0})
+
+  });
+
+
+
+//////
  gsap.set('.arrow', {rotation: 180})
  gsap.set('#arrowBox', {opacity: 0})
     //mm
     
-  let mm = gsap.matchMedia();
-mm.add("(min-width: 1200px)", () => {  
-        gsap.set('#vaultFront', {top: "4vh"})
-
-});
-mm.add("(max-width: 1199px)", () => {
-          gsap.set('#vaultFront', {top: "2vh"})
-// mobile setup code here...
-    });
-    
-
-gsap.set('#vaultFront', {scale: 0.8})
-gsap.set('#vaultBack', {scale: .8})
 
 
 gsap.to('#arrowBox', {autoAlpha:1,

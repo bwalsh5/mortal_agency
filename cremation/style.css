@@ -129,7 +129,7 @@ visibility:hidden;
 
 
 body {
-			height: 100vh;
+			height: 100%;
 /* 	max-height: 90vh; */
 	overflow-y: hidden;
 	font-family: sans-serif;
@@ -372,6 +372,7 @@ main {
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
   overflow-y: hidden;
+ 
 }
 @media (max-width: 1024px) {
 
@@ -384,6 +385,7 @@ main {
 	main {
 		height: 100%;
 		margin-top:0;
+    /* width: 1200vw; */
 	}
 }
 section {
@@ -435,7 +437,7 @@ font-size: 1em;
 footer {
 	height: 220px;
   min-height: 220px;
-	width: 680px;
+	width: 80vw;
   margin-bottom: 5%;
   /* display: flex;
   flex-direction: column;
@@ -463,12 +465,12 @@ footer::-webkit-scrollbar-thumb {
     padding: 0 12px;
   }
   footer {
-    height: 120px;
-    max-height: 120px;
-    min-height: 120px;
+    /* height: 120px; */
+    /* max-height: 120px; */
+    /* min-height: 120px; */
     /* justify-content: center; */
     /* align-items: center; */
-margin-bottom: 2px;
+margin-bottom: 8px;
     /* padding: 2px; */
   }
   header {
@@ -477,7 +479,11 @@ margin-bottom: 2px;
     min-height: 74px;
   }
 }
-
+@media all and (max-width: 800px) {
+footer {
+  max-height: 180px;
+}
+}
 /* new styles using source-detect  - they work on iphone 15 pro max? */
 .mobile header, .mobile footer {
   width: 80vw;
@@ -560,11 +566,14 @@ svg {
 }
 .lister svg {
   flex: 0 0 220px;
-  max-width: 220px;
+  max-width: 120px;
+
 }
 @media all and (max-width: 1200px) {
 .lister svg {
   /* transform:scale(0.6); */
+  max-width: 240px;
+
 }
 }
 @media all and (max-width: 800px) {

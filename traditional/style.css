@@ -612,8 +612,10 @@ font-size:0.9em;
     height: auto;
 /*    border: 1px solid blue;*/
 	position: relative;
-	z-index: 8200
-/* 	height: 120px; */
+	z-index: 8200;
+  margin: 0 auto;
+  text-align: center;
+	height: 120px;
 }
 #coffin {
 /*     border: 1px solid red;*/
@@ -621,6 +623,8 @@ font-size:0.9em;
 	height: auto;
     position: relative;
     z-index: 8000;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #coffinFront {
@@ -645,6 +649,8 @@ font-size:0.9em;
 /*     border: 1px solid red;*/
 	width: 50vw;
 	height: auto;
+  margin: 0 auto;
+  text-align: center;
     position: relative;
     z-index: 7000;
 }
@@ -668,12 +674,12 @@ font-size:0.9em;
 
 @media all and (max-width: 1200px) {
     #fade, #coffin {
-        width: 60vw;
+        /* width: 60vw; */
     }
     #vault {
        
    
-        width: 92vw;
+        /* width: 92vw; */
     }
     
 }
@@ -681,12 +687,12 @@ font-size:0.9em;
 @media all and (max-width: 799px) {
   #fade, #coffin {
      /* change */
-    width: 40vw;
+    /* width: 40vw; */
   }
   #vault {
      
  /* change */
-      width: 62vw;
+      /* width: 62vw; */
   }
   
 }
@@ -832,7 +838,7 @@ border-radius: 4px;
 	stroke-width:2;
 }
 .lister svg {
-    /* max-width: 10vw; */
+    max-width: 120px;
     flex: 0 0 240px;
 /*    margin-bottom: 320px;*/
 }

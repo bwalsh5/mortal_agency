@@ -115,7 +115,7 @@ visibility:hidden;
 
 
 body {
-			height: 100vh;
+			height: 100%;
 /* 	max-height: 90vh; */
 	overflow-y: hidden;
 	font-family: sans-serif;
@@ -362,7 +362,7 @@ main {
 	margin-top: 5%;
 	padding: 0;
 	height: 90%;
-	width: 1300vw;
+	width: 1500vw;
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
   overflow-y: hidden;
@@ -391,6 +391,9 @@ section {
 }
 @media all and (max-width: 800px) {
 	
+  main {
+    width: 2500vw;
+  }
 	section {
 		margin-right: 40vw
 	}
@@ -536,15 +539,16 @@ svg {
 
 }
 .lister svg {
+  max-width: 120px;
+
 flex: 0 0 240px;
 }
 @media all and (max-width: 1200px) {
 .lister svg {
-  flex: 0 0 800px;
-  max-width: 800px;
+  flex: 0 0 240px;
+  max-width: 240px;
 }
 }
-
 _::-webkit-full-page-media, _:future, :root .lister svg {
 
   /* width: 440px; */
@@ -563,9 +567,31 @@ _::-webkit-full-page-media, _:future, :root .lister svg {
 		height: 100%;
 	width: 100%;
 	position: absolute;
-	/* top:50%; */
+	top:0;
 	left:0;
 	z-index: 100;
+}
+@media all and (max-width: 1200px) {
+
+#back, #front {
+  top: 80px;
+}
+}
+
+}
+
+@media all and (max-width: 800px) {
+
+  #back, #front {
+    top: 280px;
+  }
+}
+
+@media all and (max-width: 600px) {
+
+  #back, #front {
+    top: 428px;
+  }
 }
 #cremationTempGauge {
   position:relative;

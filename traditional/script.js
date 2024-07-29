@@ -148,6 +148,35 @@ isTouch: 2
     stagger: .01
     
   })
+
+ 
+  gsap.set('#coffinFront', {scale: 0.6})
+  gsap.set('#coffinBack', {scale: 0.6})
+  gsap.set('#fade', {scale: 0.6})
+  gsap.set('#vault', {scale: 0.8})
+  gsap.set('#vaultFront', {scale: 0.8})
+  gsap.set('#vaultBack', {scale: 0.8})
+  
+  let mmx = gsap.matchMedia();
+  
+  // mmx.add("(max-width: 1200px)", () => {
+  //   gsap.set('#fade', {scale: 0.6})
+  //   gsap.set('#coffinFront', {scale: 0.})
+  //   gsap.set('#coffinBack', {scale: 0.5})
+  //   gsap.set('#vault', {scale: 0.5})
+  //   gsap.set('#vaultFront', {scale: 0.5})
+  //   gsap.set('#vaultBack', {scale: 0.5})
+  // });
+  
+  mmx.add("(max-width: 799px)", () => {
+    gsap.set('#fade', {scale: 0.9})
+    gsap.set('#coffinFront', {scale: 0.9})
+    gsap.set('#coffinBack', {scale: 0.9})
+    gsap.set('#vault', {scale: 0.9})
+    gsap.set('#vaultFront', {scale: 0.9})
+    gsap.set('#vaultBack', {scale: .9})
+  });
+
 //  fix so this happens when we get to it
 gsap.to('.green', 3, {fill: "#7fc241",  delay: 2, scrollTrigger:'.green'});
 
@@ -274,29 +303,22 @@ function zero() {
    document.getElementById('text').innerHTML = texty[8];   
 
     }
-    
 
   function nine() {
-    // document.getElementById('text').innerHTML = texty[9];  
       erf_fade.play();
-      // document.getElementById('title').style.display =  "none";
-      // document.getElementById('nav').style.display =  "none";
-      // document.getElementById('text').style.display =  "none";
           document.getElementById('fade').style.display =  "none";
     document.getElementById('coffin').style.display =  "none";
     document.getElementById('vault').style.display =  "none";
     }
-
-    //ICONS
-    
+    //ICONS    
     //cash
 gsap.set('#money_icon, #money_icon2', {
 	drawSVG: 0,
     transformOrigin: "bottom center"
 })
-    
+   
 let cash = new gsap.timeline();
-    
+   
 cash.to('#money_icon, #money_icon2', {										
 	drawSVG: "100%",
 	duration: 3,
@@ -408,10 +430,7 @@ rel.to('#god, #p1, #p2, #p3', {
     }
 	
 })
-//  rel.pause()
 
-         //erf
-    
     gsap.set('#globe path', {
 	drawSVG: 0
 })
@@ -439,13 +458,7 @@ erf.to('#globe path', {
     }
 })
 
-
 gsap.to('#green', 3, {fill: "#7fc241",  delay: 1});
-
-
-gsap.set('#vaultFront', {scale: 0.8})
-gsap.set('#vaultBack', {scale: .8})
-
 
 gsap.to('#arrowBox', {autoAlpha:1,
                      delay: 4
@@ -504,6 +517,9 @@ ScrollTrigger.create({
 //mm
 let mm = gsap.matchMedia();
 mm.add("(min-width: 1200px)", () => {  
+  gsap.set('#coffinFront', {top: "32px"})
+  gsap.set('#coffinBack', {top: "32px"})
+
         gsap.set('#vaultFront', {top: "4vh"})
 
 });
