@@ -220,7 +220,7 @@ function zero() {
    function two() {
         document.getElementById('title').innerHTML = titles[2];
         document.getElementById('text').innerHTML = texty[2]; 
-        gsap.to("#vault", {duration: 1.5, autoAlpha: 0});
+        
     }
 
    function three() {
@@ -538,33 +538,6 @@ onEnter: one,
 
  });   
     
-  let mm3 = gsap.matchMedia();
-mm3.add("(min-width: 1200px)", () => {  
-//desktop
-ScrollTrigger.create({
-  trigger: "#vault",
-  start: "center 40%",
-  endTrigger: "#end",
-  pin: true,
-  pinSpacing: false,
-    onEnter: two,
-  onLeaveBack: two
-   // toggleActions: "restart pause resume pause"
-});
-  });
-mm3.add("(max-width: 1199px)", () => {    
-//mobile
-  ScrollTrigger.create({
-  trigger: "#vault",
-  start: "center 43%",
-  endTrigger: "#end",
-  pin: true,
-  pinSpacing: false,
-    onEnter: two,
-  onLeaveBack: two
-   // toggleActions: "restart pause resume pause"
-});  
-});
 
     
     

@@ -491,8 +491,8 @@ erf_fade.pause();
 ScrollTrigger.create({
   trigger: "#title",
   start: "center 12%",
-  end: '#fifthLister',
-  endTrigger: "#fifthLister",
+  end: '.chacha',
+  endTrigger: ".chacha",
   pin: true,
   pinSpacing: false,
    onEnter: zero,
@@ -505,8 +505,8 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: "#text",
   start: "center 80%",
-  end: '#fifthLister',
-  endTrigger: "#fifthLister",
+  end: '.chacha',
+  endTrigger: ".chacha",
 
   pin: true,
   pinSpacing: false,

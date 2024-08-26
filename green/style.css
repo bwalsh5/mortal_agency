@@ -586,6 +586,11 @@ width: 100%;
    height: fit-content;
    margin: 0 auto;
   }
+  @media all and (max-width: 1200px) {
+    #summarytext, #summarytitle {
+      padding: 4px 24px;
+    }
+  }
 
 #summary_grid {
 	

@@ -295,7 +295,10 @@ meds.to('#research path, #research circle', {
 //      delay: -3
   });
 
-
+  gsap.set('#globe svg, #fam svg', {
+    scale:0.8
+  });
+  
 
 let mm = gsap.matchMedia();
     
@@ -304,7 +307,7 @@ gsap.set('#money svg, #env svg, #rel svg', {
 	// scale: 0.2
 });
 gsap.set('#fam svg, #globe svg', {
-	// scale: 0.1
+	 scale: 0.6
 });
 });
 mm.add("(max-width: 799px)", () => {  
@@ -312,7 +315,7 @@ mm.add("(max-width: 799px)", () => {
 	// scale: 0.35
 });
 gsap.set('#fam svg, #globe svg', {
-	// scale: 0.2
+	 scale: 0.5
 });
 	gsap.set('#oval', {
 		  // y:20,
@@ -560,8 +563,8 @@ ScrollTrigger.create({
   trigger: "#summary",
  horizontal: true,
   start: "center center",
-  end: "#chacha",  
-    endTrigger: "#chacha",
+  end: "max",  
+   // endTrigger: "#chacha",
 	pin: true
 });
 

@@ -290,7 +290,7 @@ erf.to('#globe path', {
 
       if (values2.includes("citizenYes") ) {
  
-        document.getElementById('ifelse').innerHTML = "The bad news: Without any input, you'll probably be embalmed, then buried or cremated. Only 26% of Americans have a plan in place, and roughly 100 million Americans will fall ill and need to rely on others for their health care decisions.<br/>The good news: We made this site for you - learn about your options!"
+        document.getElementById('ifelse').innerHTML = "<b>The bad news:</b> Without any input, you'll probably be embalmed, then buried or cremated. Only 26% of Americans have a plan in place, and roughly 100 million Americans will fall ill and need to rely on others for their health care decisions.<br/><b>The good news:</b> We made this site for you - learn about your options!"
       } else if (values2.includes("citizenNo") ) {
     
         document.getElementById('ifelse').innerHTML ="This site is focused on the American choices for interment, so you may learn something!"

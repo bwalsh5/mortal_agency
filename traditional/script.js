@@ -230,16 +230,16 @@ var texty = [
  `<p class='endnote'>Each year,<em>Americans </em>put into the ground:</p>
              <ul id='natural' class='endnote'>
 
-                <li>827,060 gallons of embalming fluid</li>
-                <li>2,700 tons of copper & bronze</li>
-                <li>30 million board feet of hardwoods</li>
-               <li>1,600,000 tons of reinforced concrete</li>
-                <li>14,000 tons of steel</li>
+                <li style='list-style:none'>827,060 gallons of embalming fluid</li>
+                <li style='list-style:none'>2,700 tons of copper & bronze</li>
+                <li style='list-style:none'>30 million board feet of hardwoods</li>
+               <li style='list-style:none'>1,600,000 tons of reinforced concrete</li>
+                <li style='list-style:none'>14,000 tons of steel</li>
                 <ul>
                 <p>Rating: <span  class="dot">&#9734;&#9734;&#9734;&#9734;&#9734;</span></p>`,
           `<ul id='natural' class='endnote'>
-                  <li>Some feel alienated by the spectacle, especially that of the embalmed body.</li> 
-                  <li>Achieving a 'sense of closure' gets mixed results with traditional burial.</li>
+                  <li style='list-style:none'>Some feel alienated by the spectacle, especially that of the embalmed body.</li> 
+                  <li style='list-style:none'>Achieving a 'sense of closure' gets mixed results with traditional burial.</li>
                   </ul>
                   <p>Rating:<span class="dot">&#9733;&#9733;&#9733;&#9733;&#9734;</span></p>`,
       
@@ -309,6 +309,10 @@ function zero() {
           document.getElementById('fade').style.display =  "none";
     document.getElementById('coffin').style.display =  "none";
     document.getElementById('vault').style.display =  "none";
+    // document.getElementById('text').style.display =  "none";
+    // document.getElementById('title').style.display =  "none";
+
+
     }
     //ICONS    
     //cash
@@ -481,8 +485,8 @@ gsap.to('.arrow', {
 ScrollTrigger.create({
   trigger: "#title",
   start: "center 15%",
-  endTrigger: "#fifthLister",
-   end: "#fifthLister",
+  endTrigger: ".chad",
+   end: ".chad",
   pin: true,
   pinSpacing: false,
 //    onEnter: zero(),
@@ -494,8 +498,8 @@ ScrollTrigger.create({
 ScrollTrigger.create({
   trigger: "#text",
   start: "center 80%",
-  endTrigger: "#fifthLister",
-   end: "#fifthLister",
+  endTrigger: ".chad",
+   end: ".chad",
   pin: true,
   pinSpacing: false,
   //  animation: fit,

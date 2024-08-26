@@ -801,3 +801,36 @@ padding: 12px;
   width: 90px;
   flex: 0 0 90px;
 }
+
+@media all and (max-width: 800px)  {
+
+  .accordion button {
+    font-size: .8em;
+  }
+  .accordion .accordion-content p {
+    font-size: .8em;
+     
+   }
+   .summarytext, .summarytitle {
+    font-size: 0.8em;
+    padding: 0;
+   }
+
+}
+
+
+@media all and (max-width: 1200px) and (orientation:landscape) {
+
+  .accordion button {
+    font-size: .8em;
+  }
+  .accordion .accordion-content p {
+    font-size: .8em;
+     
+   }
+   .summarytext, .summarytitle {
+    font-size: 0.8em;
+    padding: 0;
+   }
+
+}

@@ -239,8 +239,8 @@ display: block;
   display: inline-block;
   /*    margin: 0;*/
 }
-@media all and (max-width: 800px) {
-.sectionIntro {
+@media all and (max-width: 1200px) {
+.sectionIntro, .factorText {
 padding: 0 22px;
 }
 

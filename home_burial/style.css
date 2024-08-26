@@ -531,6 +531,9 @@ z-index: 9997;
     #fade, #coffin {
         width: 60vw;
     }
+    #coffinBack {
+      top: 51px;
+    }
  
 
     

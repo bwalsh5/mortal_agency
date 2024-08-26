@@ -155,7 +155,7 @@ var titles  = [   `&nbsp;`,
      Not all religions have an offical stance on Aquamation.  </p>`,
     //7          
       ` <p class='title'>  
-      Aquamation is legal in 18 states.  </p>`
+      Aquamation is legal in 23 states.  </p>`
      //8     
       // `<p class='title'>  Consider your other options:  </p>`
   ]
@@ -197,13 +197,13 @@ var titles  = [   `&nbsp;`,
             `<ul class='endnote'> 
                     <li> While there is limited or no family participation in the process, families can still have a service separate from the procedure.  </li> 
                     <li> The traditional tray can be replaced with a rented casket, if desired.  </li> 
-                    <li>  Remains may be returned to families, much like in cremation. </li> 
-                    <li>  The remains from Aquamation can also be used as fertilizer  </li>  
+                    <li>Remains may be returned to families, much like in cremation. </li> 
+                    <li>  The effluent from Aquamation can also be used as fertilizer.</li>  
                     </ul> 
                     <p>Ranking:<span class="dot">&#9734; &#9734; &#9734; &#9734; &#9734;</span></p>`,
       //6  : god
                     `<ul  class='endnote'> 
-                      <li>  While Christian faiths accept cremation as a means of disposal, 'water cremation' remains somewhat controversial.  </li> 
+                      <li>  While Christian faiths accept cremation as a means of disposition, 'water cremation' remains somewhat controversial.  </li> 
         
                       <li>  Some American Catholic diocese consider the process a denigration of the human body.  </li> 
                       <li>  A Catholic Conference in Ohio successfully prevented legislation legalizing Aquamation on these grounds.  
@@ -237,6 +237,11 @@ fader.to('#svg path', {
 		autoAlpha:1,
 	stagger: .01
 })
+
+gsap.set('#globe svg, #fam svg', {
+  scale:0.8
+});
+
 let mm = gsap.matchMedia();
     
 mm.add("(min-width: 800px)", () => {
@@ -244,7 +249,7 @@ gsap.set('#money svg, #env svg, #rel svg', {
 	// scale: 0.2
 });
 gsap.set('#fam svg, #globe svg', {
-	// scale: 0.1
+// scale: 0.6
 });
 gsap.set('#oval', {
   // scale: 1.25,
@@ -256,7 +261,7 @@ mm.add("(max-width: 799px)", () => {
 	// scale: 0.35
 });
 gsap.set('#fam svg, #globe svg', {
-	// scale: 0.2
+	 scale: 0.5
 });
 	gsap.set('#oval', {
 		  // y:120,
@@ -481,8 +486,8 @@ ScrollTrigger.create({
   trigger: "#summary",
  horizontal: true,
   start: "center center",
-  end: "#chacha",  
-    endTrigger: "#chacha",
+  end: "max",  
+  //  endTrigger: "#chacha",
 	pin: true
 });
 const items = document.querySelectorAll(".accordion button");

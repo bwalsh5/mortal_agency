@@ -368,11 +368,16 @@ main {
 	margin-top: 5%;
 
 	height: 90%;
-	width: 2000vw;
+	width: 1400vw;
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
   overflow-y: hidden;
  
+}
+@media (max-width: 1200px) {
+main {
+  width: 2000vw;
+}
 }
 @media (max-width: 1024px) {
 
@@ -385,7 +390,7 @@ main {
 	main {
 		height: 100%;
 		margin-top:0;
-    /* width: 1200vw; */
+   
 	}
 }
 section {
@@ -460,7 +465,7 @@ footer::-webkit-scrollbar-thumb {
 		width: 80vw;
     background: rgba(255,255,255,.7);
 
-	}
+	} 
   header, footer, #summarytext, #summarytitle {
     padding: 0 12px;
   }
@@ -508,7 +513,12 @@ margin-bottom: 2px;
   min-height: 74px;
 }
 
+@media all and (max-width: 800px) and (orientation:landscape) {
+.summarytext, .summarytitle {
+  font-size: 0.9em;
+}
 
+}
 
 
 .bold {
@@ -625,6 +635,7 @@ _::-webkit-full-page-media, _:future, :root .lister svg {
 
 .summary {
   flex-direction: column;
+  justify-content: center;
 }
  #summary_grid {
       	flex-grow:0;
@@ -636,9 +647,10 @@ _::-webkit-full-page-media, _:future, :root .lister svg {
 #summary_grid div svg {
 	max-width: 54px;
 }
-#summarytext{
-  font-family: 'Inter', sans-serif; 
+.summarytext{
+  /* font-family: 'Inter', sans-serif;  */
  text-align: left;
+ padding: 0 12px;
  
 /* background: rgba(96, 15, 15, 0.11); */
 padding: 1.2em;
@@ -660,7 +672,7 @@ align-items: center;
  margin: 0 auto;
 }
 .summarytitle {
-  font-family: 'Inter', sans-serif; 
+  /* font-family: 'Inter', sans-serif;  */
 
         padding: 12px;
         background: rgba(96, 15, 15, 0.11);
@@ -711,7 +723,42 @@ align-items: center;
 font-family: inherit;
 position:relative;
 z-index: 9999;
+
 /* flex: 0 0 480px; */
+}
+
+
+@media all and (max-width: 800px)  {
+
+  .accordion button {
+    font-size: .8em;
+  }
+  .accordion .accordion-content p {
+    font-size: .8em;
+     
+   }
+   .summarytext, .summarytitle {
+    font-size: 0.8em;
+    padding: 0;
+   }
+
+}
+
+
+@media all and (max-width: 1200px) and (orientation:landscape) {
+
+  .accordion button {
+    font-size: .8em;
+  }
+  .accordion .accordion-content p {
+    font-size: .8em;
+     
+   }
+   .summarytext, .summarytitle {
+    font-size: 0.8em;
+    padding: 0;
+   }
+
 }
 @media all and (max-width: 650px) {
   .faq {

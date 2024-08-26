@@ -161,11 +161,8 @@ var titles = [
   ];
   
 
-
-
 document.getElementById('header').innerHTML = titles[0];
 document.getElementById('pooter').innerHTML = texty[0];
-
 
 
 gsap.set('#arrowBox', {
@@ -189,6 +186,12 @@ fader.to('#svg path', {
 
 // if(localStorage.getItem())
 
+
+gsap.set('#globe svg, #fam svg', {
+  scale:0.8
+});
+
+
 let mm = gsap.matchMedia();
     
 mm.add("(min-width: 800px)", () => {
@@ -196,7 +199,7 @@ gsap.set('#money svg, #env svg, #rel svg', {
 	// scale: 0.2
 });
 gsap.set('#fam svg, #globe svg', {
-	// scale: 0.1
+	 scale: 0.6
 });
 });
 mm.add("(max-width: 799px)", () => {  
@@ -204,7 +207,7 @@ mm.add("(max-width: 799px)", () => {
 	// scale: 0.35
 });
 gsap.set('#fam svg, #globe svg', {
-	// scale: 0.2
+	 scale: 0.5
 });
 	gsap.set('#oval', {
 		  y:20,
@@ -395,8 +398,8 @@ ScrollTrigger.create({
   trigger: "#summary",
  horizontal: true,
   start: "center center",
-  end: "#chacha",  
-    endTrigger: "#chacha",
+  end: "max",  
+    endTrigger: "max",
 	pin: true
 });
    

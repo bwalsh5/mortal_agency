@@ -347,7 +347,7 @@ main {
 	margin-top: 5%;
 	padding: 0;
 	height: 90%;
-	width: 2400vw;
+	width: 2050vw;
 /* 	background: linear-gradient(to left, #aaa, #eee); */
 	display: flex;
   overflow-y: hidden;
@@ -629,7 +629,7 @@ max-width: 54px;
 .faq {
   margin: 0 auto;
   padding: 4rem;
-/*   max-width: 60vw; */
+  max-width: 650px;
 font-family: inherit;
 position:relative;
 z-index: 9999;
@@ -779,4 +779,37 @@ padding: 12px;
   height:100%;
   width: 90px;
   flex: 0 0 90px;
+}
+
+@media all and (max-width: 800px)  {
+
+  .accordion button {
+    font-size: .8em;
+  }
+  .accordion .accordion-content p {
+    font-size: .8em;
+     
+   }
+   .summarytext, .summarytitle {
+    font-size: 0.8em;
+    padding: 0;
+   }
+
+}
+
+
+@media all and (max-width: 1200px) and (orientation:landscape) {
+
+  .accordion button {
+    font-size: .8em;
+  }
+  .accordion .accordion-content p {
+    font-size: .8em;
+     
+   }
+   .summarytext, .summarytitle {
+    font-size: 0.8em;
+    padding: 0;
+   }
+
 }

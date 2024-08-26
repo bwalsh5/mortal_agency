@@ -130,7 +130,7 @@ let titles  = [
   //4
   `<p class='title'>  
 
-  Cremation is rather cheap.  
+  Cremation is more affordable.  
   
   </p>`,
  `<p class='title'> 
@@ -174,7 +174,7 @@ let texty = [
  `<p>A direct cremation is the most affordable interment option, but doesn't include any memorialization, nor is it witnessed.</p>
          <p>Rating:<span class="dot">&#9734;&#9734;&#9734;&#9734;&#9734;</span></p>`,
      
-        `<p>A typical cremation releases about 534 pounds of CO2 into the atmosphere. That's equivalent to a 600-mile car trip.</p>
+        `<p>A typical cremation releases about 534 pounds of CO2 into the atmosphere. That's equivalent to a 500-mile car trip.</p>
               <p>Rating: <span class="dot">&#9733;&#9733;&#9734;&#9734;&#9734;</span></p>`,
       
       //5
@@ -185,7 +185,7 @@ let texty = [
 
 <p>Rating: <span class="dot">&#9734;&#9733;&#9733;&#9733;&#9733;</span></p>`,
  
-       `<p>Traditional Muslim and Judaic beliefs ban cremation. Catholocism and other Christian religions previously banned cremation because of a belief in the reincarnation of the body.</p>
+       `<p>Traditional Muslim and Judaic beliefs ban cremation. Catholocism and other Christian religions previously banned cremation because of a belief in the resurrection of the body.</p>
                   <p>Rating: <span class="dot">&#9733;&#9733;&#9733;&#9734;&#9734;</span></p>`,
     
            `<ul id='earth' class='endnote'> 
@@ -216,6 +216,10 @@ fader.to('#svg path', {
 	stagger: .01
 })
 
+gsap.set('#globe svg, #fam svg', {
+  scale:0.8
+});
+
 
 let mm = gsap.matchMedia();
     
@@ -224,7 +228,7 @@ gsap.set('#money svg, #env svg, #rel svg', {
 	// scale: 0.2
 });
 gsap.set('#fam svg, #globe svg', {
-	// scale: 0.1
+	 scale: 0.6
 });
 });
 mm.add("(max-width: 1199px)", () => {  
@@ -232,7 +236,7 @@ mm.add("(max-width: 1199px)", () => {
 	// scale: 0.35
 });
 gsap.set('#fam svg, #globe svg', {
-	// scale: 0.2
+	 scale: 0.5
 });
 	gsap.set('#oval', {
 		  // y:20,
@@ -482,8 +486,8 @@ ScrollTrigger.create({
   trigger: ".summary",
  horizontal: true,
   start: "center center",
-  end: "#stopper",  
-  endTrigger: "#stopper",
+  end: "max",  
+ // endTrigger: "#stopper",
 	pin: true
 });
 
